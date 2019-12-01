@@ -6,7 +6,8 @@ const windowSize = {
     'Desktop': 375,
 };
 
-if (window.innerWidth < windowSize.Desktop) {
+if (!window.matchMedia("(min-width: 376px)").matches) {
+    document.querySelector('link').href = 'assets/css/styleMobile.css';
     btnMobile.style.display = 'none';
 }
 

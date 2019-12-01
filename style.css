@@ -24,11 +24,6 @@
     box-shadow: 0 0 20px 0 rgba(13, 13, 13, 0.5);
 }
 
-@keyframes opacityAnimation {
-    0% {opacity: 0};
-    100% {opacity: 1};
-}
-
 .header {
     display: flex;
     border-top-left-radius: 50px;
@@ -100,6 +95,7 @@
 
 .education__table {
     display: none;
+    animation: opacityAnimation  2s;
 }
 
 .education__table__ul__li {
@@ -204,6 +200,11 @@
 
 }
 
+@keyframes opacityAnimation {
+    0% {opacity: 0};
+    100% {opacity: 1};
+}
+
 @media(max-width: 675px) {
     body {
         margin: 0;
@@ -278,7 +279,12 @@
     }
 
     .projects__slider__info__text {
+        position: absolute;
+        z-index: 1;
+        top: 26vw;
         display: none;
+        font-size: 3vw;
+        color: #ffffff;
     }
 
     .projects__slider__info__show_description {
@@ -296,6 +302,7 @@
     }
 
     .projects__slider__info {
+        position: relative;
         width: 59vw;
         align-items: center;
         font-size: 2.3vw;

@@ -21,11 +21,17 @@ function show(target, elem) {
     if (target.className.indexOf('active') === -1) {
         elem.style.display = 'block';
         target.className += ' active';
-        if (target === showDescription) target.childNodes.textContent = 'Hide description';
+        if (target === showDescription) {
+            target.childNodes.textContent = 'Hide description';
+            projectImage.style.webkitFilter = 'blur(5px)';
+        }
     } else {
         elem.style.display = 'none';
         target.className = target.className.replace(/ active/g, '');
-        if (target === showDescription) target.childNodes.textContent = 'Show description';
+        if (target === showDescription) {
+            target.childNodes.textContent = 'Show description';
+            projectImage.style.webkitFilter = 'none';
+        }
     }
 }
 
