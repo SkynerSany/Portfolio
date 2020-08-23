@@ -1,5 +1,5 @@
 .container {
-    margin: 10vw 10vw 0 15vw;
+    margin: 1vw 10vw 0 15vw;
     max-width: 68.45vw;
     border-radius: 3.3vw;
     background-color: #faf4f4;
@@ -86,7 +86,7 @@
 
 .education__name {
     cursor: pointer;
-    margin: 0 0 2vw 0;
+    /* margin: 0 0 2vw 0; */
 }
 
 .education__name:hover {
@@ -114,6 +114,25 @@
     font-family: 'Lexend Exa', sans-serif;
 }
 
+.aboutMe__table__ul__li {
+    padding-right: 40px;
+    display: block;
+}
+
+.aboutMe__name {
+    cursor: pointer;
+    margin: 0 0 2vw 0;
+}
+
+.aboutMe__name:hover {
+    background-color: #8d8b8b;
+}
+
+.aboutMe__table {
+    display: none;
+    animation: opacityAnimation  2s;
+}
+
 .projects {
     height: 36vw;
 }
@@ -138,7 +157,9 @@
     height: 24vw;
     width: 20vw;
     background-image: url(assets/images/repair.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
 }
 
@@ -294,6 +315,8 @@
     .projects__slider__image {
         height: 44vw;
         width: 100%;
+        background-size: cover;
+        background-position: initial;
     }
 
 

@@ -1,0 +1,22 @@
+.settings_button {
+    position: fixed;
+    z-index: 2;
+    bottom: 2vw;
+    right: 2vw;
+    font-size: 3vw;
+    font-family: monospace;
+    color: #00c4ff;
+    width: 14vw;
+    text-align: center;
+  }
+  
+  .btn {
+    border: 0.2vw solid;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    color: #000000;
+  }

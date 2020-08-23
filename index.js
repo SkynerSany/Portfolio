@@ -1,13 +1,18 @@
+const body = document.querySelector("body");
 const education = document.querySelector('.education__name');
 const educationTable = document.querySelector('.education__table');
+const aboutMe = document.querySelector('.aboutMe__name');
+const aboutMeTable = document.querySelector('.aboutMe__table');
 const projectName = document.querySelector('.projects__slider__info__name');
 const projectInfo = document.querySelector('.projects__slider__info__text');
 const projectImage = document.querySelector('.projects__slider__image');
 const showDescription = document.querySelector('.projects__slider__info__show_description');
 const description = document.querySelector('.projects__slider__info__text');
 const projects = [
-    {'name': 'Repair and design', 'info': '1) integrated map api<br> 2) integrated youtube videos<br>3) many interactive elements', 'img': 'assets/images/repair.png', 'page': 'projects/repair-design-project/index.html'}, 
-    {'name': 'Theyalow', 'info': '1) interesting design<br>2) interactive scroll', 'img': 'assets/images/theyalow.jpg', 'page': 'projects/theyalow/index.html'}
+    {'name': 'Repair and design', 'info': '1) HTML<br> 2) SCSS', 'img': 'assets/images/repair.png', 'page': 'projects/repair-design-project/index.html'}, 
+    {'name': 'Theyalow', 'info': '1) HTML<br>2) CSS', 'img': 'assets/images/theyalow.jpg', 'page': 'projects/theyalow/index.html'},
+    {'name': 'Weather', 'info': '1) HTML<br>2) SCSS<br>3) JS<br>4) WEBPACK', 'img': 'assets/images/weather.png', 'page': 'projects/weather/index.html'},
+    {'name': 'Virtual keyboard', 'info': '1) HTML<br>2) CSS<br>3) JS', 'img': 'assets/images/keyboard.png', 'page': 'projects/codejam-virtual-keyboard/index.html'},
 ];
 const arrowLeft = document.querySelector('.left');
 const arrowRight = document.querySelector('.right');
@@ -16,6 +21,8 @@ let swipe = 0;
 let startX;
 let startY;
 let dist;
+
+projectImage.style.backgroundSize = 'cover';
 
 function show(target, elem) {
     if (target.className.indexOf('active') === -1) {
@@ -36,6 +43,10 @@ function show(target, elem) {
 }
 
 function switchProject() {
+    if (i === 0 && body.offsetWidth >= 675) {
+        projectImage.style.backgroundSize = 'cover';
+    } else if(body.offsetWidth >= 675) projectImage.style.backgroundSize = 'contain';
+
     projectName.textContent = projects[i].name;
     projectInfo.innerHTML = projects[i].info;
     projectImage.style.backgroundImage = `url('${projects[i].img}')`;
@@ -43,6 +54,10 @@ function switchProject() {
 
 education.addEventListener('click', () => {
     show(education, educationTable);
+});
+
+aboutMe.addEventListener('click', () => {
+    show(aboutMe, aboutMeTable);
 });
 
 showDescription.addEventListener('click', () => {
