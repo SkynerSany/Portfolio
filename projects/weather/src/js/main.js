@@ -10,6 +10,14 @@ function resetBackground(loc = location) {
 
 resetBackground(location);
 
+function switchSize(size) {
+  Array.from(document.styleSheets[0].cssRules).forEach((el, i) => {
+      if (el.media) { 
+          el.media.mediaText = `(max-width: ${size}px)`;
+      }
+  });
+}
+
 export {
   location,
   resetBackground,

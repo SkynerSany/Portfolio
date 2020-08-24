@@ -5,3 +5,11 @@ if (!window.matchMedia("(min-width: 376px)").matches) {
     document.querySelector('.container').style.maxWidth = '640px';
     btnMobile.style.display = 'none';
 }
+
+function switchSize(size) {
+    Array.from(document.styleSheets[0].cssRules).forEach((el, i) => {
+        if (el.media) { 
+            el.media.mediaText = `(max-width: ${size}px)`;
+        }
+    });
+}
