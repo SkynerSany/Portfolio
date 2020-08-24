@@ -92,3 +92,11 @@ btnSearch.addEventListener('click', () => {
   map(newLocation.results[0].geometry);
   nуwWeather();
 });
+
+// settings button
+
+const back = document.querySelector('.settings_button__back');
+
+back.addEventListener('click', () => {
+  document.location = '../../index.html';
+});

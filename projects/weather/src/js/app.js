@@ -5,4 +5,3 @@ import './main';
 import './weather';
 import './map';
 import './controlBtns';
-import './settingsBtns';

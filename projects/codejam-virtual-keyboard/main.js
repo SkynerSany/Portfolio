@@ -266,19 +266,12 @@ function switchSize(size) {
     });
 }
 
-btnMobile.addEventListener('click', () => {
-    let type = btnMobile.firstChild.textContent;
-    if (type === 'Mobile') {
-        switchSize(window.innerWidth);
-        btnMobile.firstChild.textContent = 'Desktop';
-    } else {
-        switchSize(windowSize[type]);
-        btnMobile.firstChild.textContent = 'Mobile';
-    }
-});
+window.onunload = () => sessionStorage.switcher = switcher;
+
+// sttings button
+
+const back = document.querySelector('.settings_button__back');
 
 back.addEventListener('click', () => {
-    document.location = '../../index.html';
+  document.location = '../../index.html';
 });
-
-window.onunload = () => sessionStorage.switcher = switcher;
