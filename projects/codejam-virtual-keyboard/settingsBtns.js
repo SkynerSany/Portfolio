@@ -6,10 +6,6 @@ const windowSize = {
     'Desktop': 375,
 };
 
-if (!window.matchMedia("(min-width: 376px)").matches) {
-    btnMobile.style.display = 'none';
-}
-
 function switchSize(size) {
   Array.from(document.styleSheets[0].cssRules).forEach((el, i) => {
       if (el.media) { 
