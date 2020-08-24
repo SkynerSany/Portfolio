@@ -13,3 +13,18 @@ function switchSize(size) {
         }
     });
 }
+
+btnMobile.addEventListener('click', () => {
+    let type = btnMobile.firstChild.textContent;
+    if (type === 'Mobile') {
+        switchSize(window.innerWidth);
+        btnMobile.firstChild.textContent = 'Desktop';
+    } else {
+        switchSize(windowSize[type]);
+        btnMobile.firstChild.textContent = 'Mobile';
+    }
+});
+
+back.addEventListener('click', () => {
+    document.location = '../../index.html';
+});
