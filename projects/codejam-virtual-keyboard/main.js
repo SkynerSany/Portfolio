@@ -258,20 +258,4 @@ function event() {
 
 domLoad();
 
-function switchSize(size) {
-    Array.from(document.styleSheets[0].cssRules).forEach((el, i) => {
-        if (el.media) { 
-            el.media.mediaText = `(max-width: ${size}px)`;
-        }
-    });
-}
-
 window.onunload = () => sessionStorage.switcher = switcher;
-
-// sttings button
-
-const back = document.querySelector('.settings_button__back');
-
-back.addEventListener('click', () => {
-  document.location = '../../index.html';
-});
