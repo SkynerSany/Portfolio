@@ -87,7 +87,7 @@ export default class Time {
             }
 
             const img = document.createElement('img');
-            img.src = `/skynersany-JS2020Q3/momentum/src/assets/images/${this.dayTime}/${this.bgMas[this.tempBg]}.jpg`;
+            img.src = `/Portfolio/projects/momentum/src/assets/images/${this.dayTime}/${this.bgMas[this.tempBg]}.jpg`;
             img.onload = () => {
                 this.body.style.backgroundImage = `url('${img.src}')`;
             };
@@ -96,7 +96,7 @@ export default class Time {
         if (this.curentBg !== this.timeNumbers[0]) {
             this.curentBg = this.timeNumbers[0];
             this.checkTime();
-            this.body.style.backgroundImage = `url('/skynersany-JS2020Q3/momentum/src/assets/images/${this.dayTime}/${this.bgMas[this.curentBg]}.jpg')`;
+            this.body.style.backgroundImage = `url('/Portfolio/projects/momentum/src/assets/images/${this.dayTime}/${this.bgMas[this.curentBg]}.jpg')`;
             this.switchGreeting(this.dayTime);
         }
     }
