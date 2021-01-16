@@ -86,7 +86,6 @@
 
 .education__name {
     cursor: pointer;
-    /* margin: 0 0 2vw 0; */
 }
 
 .education__name:hover {
@@ -156,10 +155,10 @@
 .projects__slider__image {
     height: 24vw;
     width: 20vw;
-    background-image: url(assets/images/repair.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    transition: 0.3s all ease;
     cursor: pointer;
 }
 
@@ -315,7 +314,7 @@
     .projects__slider__image {
         height: 44vw;
         width: 100%;
-        background-size: cover;
+        background-size: contain;
         background-position: initial;
     }
 

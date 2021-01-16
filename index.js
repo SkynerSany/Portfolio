@@ -9,6 +9,10 @@ const projectImage = document.querySelector('.projects__slider__image');
 const showDescription = document.querySelector('.projects__slider__info__show_description');
 const description = document.querySelector('.projects__slider__info__text');
 const projects = [
+    {'name': 'Gem-puzzle', 'info': '1) HTML<br> 2) SCSS<br> 3) JS<br> 4) WEBPACK', 'img': 'assets/images/gempuzzle.png', 'page': 'projects/gem-puzzle/index.html'},
+    {'name': 'Momentum', 'info': '1) HTML<br> 2) SCSS<br> 3) JS<br> 4) WEBPACK', 'img': 'assets/images/momentum.png', 'page': 'projects/momentum/index.html'},
+    {'name': 'Shelter', 'info': 'This project have a two pages: "About the shelter" and "Our pets"<br><br> 1) HTML<br> 2) SCSS<br> 3) WEBPACK', 'img': 'assets/images/shelter.png', 'page': 'projects/shelter/pages/main/main.html'},
+    {'name': 'Shelter', 'info': '1) HTML<br> 2) CSS<br>', 'img': 'assets/images/webdev.png', 'page': 'projects/webdev/index.html'},
     {'name': 'Repair and design', 'info': '1) HTML<br> 2) SCSS', 'img': 'assets/images/repair.png', 'page': 'projects/repair-design-project/index.html'}, 
     {'name': 'Theyalow', 'info': '1) HTML<br>2) CSS', 'img': 'assets/images/theyalow.jpg', 'page': 'projects/theyalow/index.html'},
     {'name': 'Weather', 'info': '1) HTML<br>2) SCSS<br>3) JS<br>4) WEBPACK', 'img': 'assets/images/weather.png', 'page': 'projects/weather/index.html'},
@@ -21,8 +25,6 @@ let swipe = 0;
 let startX;
 let startY;
 let dist;
-
-projectImage.style.backgroundSize = 'cover';
 
 function show(target, elem) {
     if (target.className.indexOf('active') === -1) {
@@ -43,10 +45,6 @@ function show(target, elem) {
 }
 
 function switchProject() {
-    if (i === 0 && body.offsetWidth >= 675) {
-        projectImage.style.backgroundSize = 'cover';
-    } else if(body.offsetWidth >= 675) projectImage.style.backgroundSize = 'contain';
-
     projectName.textContent = projects[i].name;
     projectInfo.innerHTML = projects[i].info;
     projectImage.style.backgroundImage = `url('${projects[i].img}')`;
@@ -108,3 +106,5 @@ projectImage.addEventListener('touchend', function(e){
     handleSwipe(swipe);
     e.preventDefault();
 });
+
+switchProject();
