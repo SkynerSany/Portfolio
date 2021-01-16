@@ -57,6 +57,6 @@ function addEventsForBtns() {
   }
 
   back.addEventListener("click", () => {
-    document.location = "/index.html";
+    document.location = "/Portfolio/index.html";
   });
 }
