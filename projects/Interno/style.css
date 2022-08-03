@@ -350,10 +350,10 @@ body {
 
 .partners {
   height: 7.2vw;
-  display: flex;
-  justify-content: space-between;
   width: 76.2vw;
   margin-left: 11.65vw;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -378,5 +378,88 @@ body {
 
 .partners__imgClassic {
   height: 3.34vw;
+}
+
+.recentProjects {
+  width: 83.3vw;
+  margin-top: 7.85vw;
+  margin-left: 8.35vw;
+}
+
+.recentProjects__headerBox {
+  margin-bottom: 4.95vw;
+}
+
+.recentProjects__header {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.26vw;
+  line-height: 133%;
+  text-align: center;
+  letter-spacing: 0.015vw;
+  color: #292F36;
+}
+
+.recentProjects__headerInfoText {
+  width: 52vw;
+  margin: 1.35vw auto 0;
+  font-size: 1.528vw;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.015vw;
+  color: #4D5053;
+}
+
+.recentProjects__projectsContainer {
+  height: 113.36vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recentProjects__project {
+  height: 52.51vw;
+}
+
+.recentProjects__projectImage {
+  height: 45.9vw;
+}
+
+.recentProjects__projectInfoBox {
+  height: 7.36vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recentProjects__projectName {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-size: 1.67vw;
+  line-height: 156%;
+  letter-spacing: 0.015vw;
+  color: #292F36;  
+}
+
+.recentProjects__projectStyle {
+  font-size: 1.528vw;
+  line-height: 150%;
+  letter-spacing: 0.015vw;
+  color: #4D5053;
+}
+
+.recentProjects__projectBtn {
+  height: 4.86vw;
+  width: 4.86vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F4F0EC;
+  border-radius: 50%;
+}
+
+.recentProjects__projectBtnIcon {
+  height: 1.11vw;
 }
 
