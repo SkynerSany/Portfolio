@@ -28,14 +28,14 @@ body {
 }
 
 .header {
-  height: 6.5vw;
+  height: 7.3vw;
   display: flex;
   justify-content: center;
 }
 
 .header__nav {
   width: 83vw;
-  padding-bottom: 0.65vw;
+  padding-top: 0.2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,15 +101,11 @@ body {
   align-items: center;
   background: #292f36;
   border: 2px solid #292f36;
-  border-radius: 18px;
+  border-radius: 1.25vw;
   color: #ffffff;
   font-size: 1.19vw;
   letter-spacing: 0.08vw;
 }
-
-/* .createInterior__btn:hover {
-  background: #434c56;
-} */
 
 .createInterior__btnText {
   margin-left: 0.9vw;
@@ -274,3 +270,113 @@ body {
 .challengingDesigns__image {
   width: 41.1vw;
 }
+
+.reviews {
+  height: 66.4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__container {
+  height: 46.8vw;
+  width: 83.3vw;
+  background: #F4F0EC;
+  border-radius: 5vw;
+}
+
+.reviews__header {
+  width: 34vw;
+  margin: 7.2vw auto 3.2vw;
+  font-family: 'DM Serif Display';
+  font-size: 3.12vw;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.015vw;
+  color: #292F36;
+}
+
+.reviews__reviewsBox {
+  height: 20.04vw;
+  width: 76.35vw;
+  margin-left: 3.45vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__reviw {
+  width: 24.7vw;
+  padding: 3.55vw 2.5vw;
+  background: #FFFFFF;
+  border-radius: 9.5%;
+}
+
+.reviews__personBox {
+  display: flex;
+}
+
+.reviews__personPhoto {
+  width: 5.34vw;
+}
+
+.reviews__personeInfo {
+  padding-top: 0.4vw;
+  padding-left: 1.38vw;
+  font-style: normal;
+}
+
+.reviews__personName {
+  font-family: 'DM Serif Display';
+  font-size: 1.736vw;
+  line-height: 150%;
+  letter-spacing: 0.015vw;
+  color: #292F36;
+}
+
+.reviews__personCity {
+  font-size: 1.25vw;
+  line-height: 150%;
+  letter-spacing: 0.015vw;
+  color: #4D5053;
+}
+
+.reviews__text {
+  margin-top: 1.75vw;
+  font-size: 1.389vw;
+  line-height: 150%;
+  letter-spacing: 0.015vw;
+  color: #4D5053;
+}
+
+.partners {
+  height: 7.2vw;
+  display: flex;
+  justify-content: space-between;
+  width: 76.2vw;
+  margin-left: 11.65vw;
+  align-items: center;
+}
+
+.partners__imgModern {
+  height: 3vw;
+}
+
+.partners__imgStyle {
+  margin-left: 2.5vw;
+  height: 7.1vw;
+}
+
+.partners__imgBrand {
+  margin-left: 1.1vw;
+  height: 2.99vw;
+}
+
+.partners__imgNature {
+  margin-right: 1.4vw;
+  height: 3.1vw;
+}
+
+.partners__imgClassic {
+  height: 3.34vw;
+}
+
