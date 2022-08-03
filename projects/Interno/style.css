@@ -463,3 +463,46 @@ body {
   height: 1.11vw;
 }
 
+.statistics {
+  height: 33vw;
+  margin-top: 5.5vw;
+  padding-left: 8.3vw;
+  display: flex;
+  align-items: center;
+  background: #F4F0EC;
+}
+
+.statistics__infoBox {
+  height: 13.54vw;
+  width: 20vw;
+  padding-top: 1vw;
+}
+
+.statistics__infoBox:first-child {
+  padding-right: 1.3vw;
+}
+
+.statistics__infoBox:not(:first-child) {
+  margin-right: 1.2vw;
+  padding-left: 0.8vw;
+  border-left: #CDA274 solid 0.07vw;
+}
+
+.statistics__number {
+  font-family: 'DM Serif Display';
+  font-size: 5.9vw;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 1.7px;
+  color: #CDA274;  
+}
+
+.statistics__text {
+  margin-top: 0.7vw;
+  font-size: 1.528vw;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.015vw;
+  color: #4D5053;
+}
+
