@@ -41,6 +41,10 @@ body {
   align-items: center;
 }
 
+.header__nav a {
+  display: contents;
+}
+
 .header__logo {
   height: 3.4vw;
 }
@@ -404,7 +408,7 @@ body {
 .recentProjects__headerInfoText {
   width: 52vw;
   margin: 1.35vw auto 0;
-  font-size: 1.528vw;
+  font-size: 1.53vw;
   line-height: 150%;
   text-align: center;
   letter-spacing: 0.015vw;
@@ -443,7 +447,7 @@ body {
 }
 
 .recentProjects__projectStyle {
-  font-size: 1.528vw;
+  font-size: 1.53vw;
   line-height: 150%;
   letter-spacing: 0.015vw;
   color: #4D5053;
@@ -499,10 +503,115 @@ body {
 
 .statistics__text {
   margin-top: 0.7vw;
-  font-size: 1.528vw;
+  font-size: 1.53vw;
   line-height: 150%;
   text-align: center;
   letter-spacing: 0.015vw;
   color: #4D5053;
 }
+
+.recentBlogs {
+  margin-top: 10vw;
+}
+
+.recentBlogs__header {
+  font-family: 'DM Serif Display';
+  font-size: 3.33vw;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.015vw;
+  color: #292F36;
+}
+
+.recentBlogs__headerInfoText {
+  width: 40vw;
+  margin: 1.5vw auto 4.85vw;
+  font-size: 1.53vw;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.015vw;
+  color: #4D5053;
+}
+
+.recentBlogs__blogsContainer {
+  height: 74.3vw;
+  width: 91.7vw;
+  padding-left: 8.3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.recentBlogs__blog {
+  height: 35.76vw;
+  width: 26.87vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.07vw solid #E7E7E7;
+  border-radius: 4.3vw;
+}
+
+.recentBlogs__blogImg {
+  margin-top: 1.35vw;
+  height: 20.55vw;
+}
+
+.recentBlogs__blogName {
+  width: 23.85vw;
+  padding-top: 1.08vw;
+  font-family: 'DM Serif Display';
+  font-size: 1.736vw;
+  line-height: 140%;
+  letter-spacing: 0.035vw;
+  color: #292F36;
+}
+
+.recentBlogs__linkBox {
+  width: 24vw;
+  margin-top: 1.4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recentBlogs__date {
+  font-size: 1.11vw;
+  line-height: 150%;
+  letter-spacing: 0.015vw;
+  color: #4D5053;
+}
+
+.recentBlogs__btn {
+  height: 3.61vw;
+  width: 3.61vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F4F0EC;
+  border-radius: 50%;
+}
+
+.recentBlogs__iconBtn {
+  height: 1.11vw;
+}
+
+.recentBlogs__roomeType {
+  height: 3.06vw;
+  padding: 0 0.69vw;
+  position: absolute;
+  top: 16.86vw;
+  left: 3.1vw;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 0.556vw 0.556vw 0.556vw 0px;
+  font-size: 1.11vw;
+  line-height: 150%;
+  letter-spacing: 0.015vw;
+  color: #4D5053;
+}
+
 
