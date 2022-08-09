@@ -1,0 +1,62 @@
+$headerColor: #F4F4F4;
+$textColor: rgba(255, 255, 255, 0.6);
+$bgColor: #282828;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+}
+
+.header {
+  height: 5vw;
+  position: relative;
+  display: flex;
+  align-content: center;
+  background-color: $bgColor;
+  box-shadow: 16px 16px 20px rgba(255, 255, 255, 0.05)
+}
+
+.header__container {
+  width: 84vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 2.5vw;
+  color: $headerColor;
+}
+
+.header__settingsBtn {
+  height: 2vw;
+}
+
+.main {
+  height: 50vw;
+  background-color: $bgColor;
+}
+
+@font-face {
+  font-family: 'SF Pro Display bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url(//src/assets/fonts/SF_Pro_Display_Bold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: url(//src/assets/fonts/SF_Pro_Display_Semibold.ttf) format('ttf');
+}
