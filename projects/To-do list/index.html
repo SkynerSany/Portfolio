@@ -12,10 +12,33 @@
       <div class="header__container">
         <a href="#"><h1 class="header__title">To Do List</h1></a>
         <img src="src/assets/images/gear.svg" alt="gear" class="header__settingsBtn">
+        <button class="header__createNewTaskBtn">Add new task</button>
       </div>
     </header>
     <main class="main">
-
+      <section class="createNewTask">
+        <form action="" class="createNewTask__form">
+          <div class="createNewTask__textContainer">
+            <label for="title" class="createNewTask__itemDescription">Header:</label>
+            <input type="text" name="" id="title" class="createNewTask__title">
+            <label for="description" class="createNewTask__itemDescription">Description:</label>
+            <textarea name="" id="description" cols="30" rows="10" class="createNewTask__description"></textarea>
+          </div>
+          <div class="createNewTask__dataContainer">
+            <label for="date" class="createNewTask__itemDescription">Date:</label>
+            <input type="date" name="" id="date" min="2022-01-01" max="2099-12-31" class="createNewTask__date">
+            <label for="time" class="createNewTask__itemDescription">Time:</label>
+            <input type="time" name="" id="time" class="createNewTask__time">
+            <label for="colorsBox" class="createNewTask__itemDescription">Importance:</label>
+            <div class="createNewTask__colorsBox" tabindex="4"></div>
+            <ul class="createNewTask__colors">
+              <li class="createNewTask__color createNewTask__color--red"></li>
+              <li class="createNewTask__color createNewTask__color--orange"></li>
+              <li class="createNewTask__color createNewTask__color--green"></li>
+            </ul>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="footer">
 
