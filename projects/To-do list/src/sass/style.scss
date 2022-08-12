@@ -106,7 +106,7 @@ input {
   height: 27vw;
   width: 75vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .createNewTask__textContainer {
@@ -249,6 +249,25 @@ input {
   color: $headerColor;
 }
 
+.createNewTask__submitBtn {
+  height: 3vw;
+  width: 9vw;
+  position: absolute;
+  bottom: 3.5vw;
+  right: 3.5vw;
+  margin: 0.3vw 0;
+  border-radius: 0.3vw;
+  border: none;
+  font-size: 1.3vw;
+  color: $headerColor;
+  border: none;
+  background-color: #FF0000;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 7px 1px $headerColor;
+  }
+}
 
 @keyframes openCreateNewTaskAnimation {
   0% {
