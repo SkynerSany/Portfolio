@@ -1,32 +1,29 @@
 export default class SelectionMenu {
-  constructor(createNewTaskColorsBox,
-      createNewTaskColors, focusElemBorder, unfocusElemBorder) {
-    this.createNewTaskColorsBox = document.querySelector(`.${createNewTaskColorsBox}`);
-    this.createNewTaskColors = document.querySelector(`.${createNewTaskColors}`);
-    this.focusElemBorder = focusElemBorder;
-    this.unfocusElemBorder = unfocusElemBorder;
+  constructor(colorsBox, colors) {
+    this.colorsBox = document.querySelector(`.${colorsBox}`);
+    this.colors = document.querySelector(`.${colors}`);
   }
 
   generateEventForSwitchMenu() {
-    this.createNewTaskColorsBox.addEventListener('click', () => {
-      if (window.getComputedStyle(this.createNewTaskColors).display === 'none') {
-        this.createNewTaskColors.style.display = 'block';
+    this.colorsBox.addEventListener('click', () => {
+      if (window.getComputedStyle(this.colors).display === 'none') {
+        this.colors.style.display = 'block';
       } else {
-        this.createNewTaskColors.style.display = 'none';
+        this.colors.style.display = 'none';
       }
     });
 
-    this.createNewTaskColorsBox.addEventListener('blur', () => {
-      if (!Array.from(document.querySelectorAll(':hover')).includes(this.createNewTaskColors)) {
-        this.createNewTaskColors.style.display = 'none';
+    this.colorsBox.addEventListener('blur', () => {
+      if (!Array.from(document.querySelectorAll(':hover')).includes(this.colors)) {
+        this.colors.style.display = 'none';
       }
     });
 
-    this.createNewTaskColors.addEventListener('click', (e) => {
+    this.colors.addEventListener('click', (e) => {
       if (e.target.tagName === 'LI') {
-        this.createNewTaskColorsBox.style.backgroundColor = window.getComputedStyle(e.target).backgroundColor;
+        this.colorsBox.style.backgroundColor = window.getComputedStyle(e.target).backgroundColor;
       }
-      this.createNewTaskColors.style.display = 'none';
+      this.colors.style.display = 'none';
     });
   }
 }

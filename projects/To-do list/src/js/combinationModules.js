@@ -1,15 +1,18 @@
 import SelectionMenu from './moduleSelectionMenu';
 import CreateNewTask from './moduleCreateNewTask';
+import GenerationTask from './moduleGenerationTask';
+import LoadData from './loadData';
 
 const ModuleCreateNewTask = new CreateNewTask();
 
 const ModuleSelectionMenu = new SelectionMenu(
   'createNewTask__colorsBox',
   'createNewTask__colors',
-  '0.2vw solid #282828',
-  '0.2vw solid #F4F4F4',
 );
+
+const ModuleLoadData = new LoadData();
 
 ModuleCreateNewTask.generateEvents();
 ModuleCreateNewTask.clearInputs();
 ModuleSelectionMenu.generateEventForSwitchMenu();
+ModuleLoadData.convertDataFromStorage();
