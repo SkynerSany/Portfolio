@@ -26,7 +26,7 @@ input {
 .header {
   height: 5vw;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   align-content: center;
   background-color: $bgColor;
@@ -43,7 +43,7 @@ input {
 
 .header__title {
   font-weight: bold;
-  font-size: 2.5vw;
+  font-size: 3vw;
   color: $headerColor;
 }
 
@@ -59,7 +59,6 @@ input {
   left: 50%;
   top: 2.83vw;
   margin-left: -4vw;
-  z-index: 2;
   background-color: $bgColor;
   border-radius: 1vw 1vw 0 0;
   border: 0.2vw solid $headerColor;
@@ -74,7 +73,6 @@ input {
 }
 
 .main {
-  height: 50vw;
   background-color: $bgColor;
 }
 
@@ -84,22 +82,19 @@ input {
   position: absolute;
   top: -30vw;
   left: 8vw;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $bgColor;
   border-radius: 0 0 1vw 1vw;
   border: 0.2vw solid $headerColor;
+  transition-duration: 0.3s;
 }
 
 .createNewTask--open {
-  animation: openCreateNewTaskAnimation 0.3s linear;
+  animation: openCreateNewTaskAnimation linear;
   top: 4.85vw;
-}
-
-.createNewTask--close {
-  animation: closeCreateNewTaskAnimation 0.3s linear;
-  top: -30vw;
 }
 
 .createNewTask__form {
@@ -144,7 +139,7 @@ input {
 }
 
 .createNewTask__dataContainer {
-  height: 17vw;
+  height: 11vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -170,27 +165,6 @@ input {
   }
 }
 
-.createNewTask__time {
-  height: 3vw;
-  width: 9vw;
-  margin-bottom: 1vw;
-  padding: 0 0.4vw 0 2.5vw;
-  border-radius: 0.3vw;
-  border: none;
-  font-size: 1.1vw;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  &::-webkit-calendar-picker-indicator {
-    cursor: pointer;
-  }
-  &::-webkit-datetime-edit-hour-field, &::-webkit-datetime-edit-minute-field {
-    &:focus {
-      background: $bgColor;
-    }
-  }
-}
-
 .createNewTask__colorsBox {
   height: 3vw;
   width: 9vw;
@@ -210,7 +184,7 @@ input {
 
 .createNewTask__colors {
   width: 9vw;
-  top: 20.8vw;
+  top: 14.7vw;
   position: absolute;
   display: none;
   list-style-type: none;
@@ -249,6 +223,175 @@ input {
   color: $headerColor;
 }
 
+.createNewTask__submitBtn {
+  height: 3vw;
+  width: 9vw;
+  position: absolute;
+  bottom: 3.6vw;
+  right: 12.3vw;
+  margin: 0.3vw 0;
+  border-radius: 0.3vw;
+  border: none;
+  font-size: 1.3vw;
+  color: $headerColor;
+  border: none;
+  background-color: #FF0000;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 7px 1px $headerColor;
+  }
+}
+
+.tasks {
+  height: auto;
+  width: 84vw;
+  margin-left: 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  cursor: default;
+}
+
+.tasks__taskContainer {
+  height: auto;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #282828;
+}
+
+.tasks__headerBox {
+  height: 5vw;
+  width: 70vw;
+  margin: 3vw auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $bgColor;
+  box-shadow: 0 0 7px 1px $headerColor;
+  border: 0.2vw solid $headerColor;
+  border-radius: 1.3vw;
+  z-index: 1;
+}
+
+.tasks__dataBox {
+  display: flex;
+  align-items: center;
+}
+
+.tasks__importanceBox {
+  height: 3vw;
+  width: 1vw;
+  margin: 1vw;
+  border-radius: 1vw;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 20px 0px $bgColor;
+}
+
+.tasks__date {
+  font-size: 2.4vw;
+  font-weight: bold;
+  color: $headerColor;
+}
+
+.tasks__openTaskBtn {
+  height: 2vw;
+  width: 2vw;
+  margin: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $headerColor;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 7px 1px $headerColor;
+  }
+}
+
+.tasks__openTaskBtnIcon {
+  height: 1vw;
+  transform: rotate(90deg);
+}
+
+.tasks__list {
+  width: 63.5vw;
+  margin-top: -4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: $bgColor;
+  box-shadow: 0 0 7px 1px $headerColor;
+  border: 0.2vw solid $headerColor;
+  border-radius: 1.3vw;
+}
+
+.tasks__task {
+  width: 60vw;
+  margin: 1vw 0;
+  display: flex;
+  align-items: center;
+}
+
+.tasks__task--confirm {
+  opacity: 0.5;
+}
+
+.tasks__data {
+  width: 52vw;
+}
+
+.tasks__title {
+  font-size: 1.8vw;
+  font-weight: bold;
+  color: $headerColor;
+  line-height: 1.6vw;
+  text-transform: capitalize;
+}
+
+.tasks__description {
+  font-size: 1vw;
+  color: $textColor;
+}
+
+.tasks__confirmationBtn {
+  display: inline-block;
+  width: 5vw;
+  height: 2.5vw;
+  border-radius: 2vw;
+  background-color: #FF0000;
+  z-index: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms;
+  box-shadow: inset 0px 0px 20px 0px $bgColor;
+  &::after {
+    content: "";
+    height: 2.3vw;
+    width: 2.3vw;
+    border-radius: 50%;
+    background-color: $headerColor;
+    top: 0.1vw;
+    left: 0.1vw;
+    transition-duration: 300ms;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.switchOn {
+  background-color: #10C200;
+  &::after {
+    left: 2.55vw;
+  }
+}
 
 @keyframes openCreateNewTaskAnimation {
   0% {
@@ -256,14 +399,5 @@ input {
   }
   100% {
     top: 4.85vw;
-  }
-}
-
-@keyframes closeCreateNewTaskAnimation {
-  0% {
-    top: 4.85vw;
-  }
-  100% {
-    top: -30vw;
   }
 }
