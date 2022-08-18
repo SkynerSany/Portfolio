@@ -67,9 +67,11 @@ export default class CreateNewTask {
     });
 
     this.submitBtn.addEventListener('click', () => {
-      this.saveTask();
-      this.clearInputs();
-      this.closeBox();
+      if (this.title.value) {
+        this.saveTask();
+        this.clearInputs();
+        this.closeBox();
+      }
     });
   }
 }

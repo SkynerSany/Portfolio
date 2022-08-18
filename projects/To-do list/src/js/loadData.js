@@ -96,11 +96,22 @@ export default class LoadData {
     ];
   }
 
-  convertDataFromStorage() {
+  clearOlderTasks() {
     if (localStorage.tasks) {
       const data = JSON.parse(localStorage.tasks);
-      const moduleGenerationTask = new GenerationTask();
+      Object.keys(data).forEach(key => {
+        if (key < new Date().toISOString().slice(0, 10)) delete data[key];
+      });
+      localStorage.tasks = JSON.stringify(data);
+      return data;
+    }
+  }
+
+  convertDataFromStorage() {
+    if (localStorage.tasks) {
+      const data = this.clearOlderTasks();
       Object.keys(data).forEach((key) => {
+        const moduleGenerationTask = new GenerationTask();
         this.tasksContainer.forEach((item) => {
           if (item.p) {
             item.p.textContent = key;
@@ -119,14 +130,8 @@ export default class LoadData {
           });
           moduleGenerationTask.generationTask(this.taskBox);
         });
+        moduleGenerationTask.openDayTasksEvent();
       });
     }
-  }
-
-  openTasks() {
-    const taskBtn = document.querySelector('.tasks__openTaskBtn');
-    taskBtn.addEventListener('click', () => {
-      
-    });
   }
 }

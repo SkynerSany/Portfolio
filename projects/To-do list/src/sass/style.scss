@@ -73,6 +73,7 @@ input {
 }
 
 .main {
+  min-height: 89.7vh;
   background-color: $bgColor;
 }
 
@@ -317,26 +318,35 @@ input {
 .tasks__openTaskBtnIcon {
   height: 1vw;
   transform: rotate(90deg);
+  transition-duration: 300ms;
+}
+
+.tasks__openTaskBtnIcon--opened {
+  transform: rotate(270deg);
 }
 
 .tasks__list {
+  height: 0;
   width: 63.5vw;
   margin-top: -4vw;
+  margin-bottom: 1vw;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   flex-direction: column;
   background-color: $bgColor;
   box-shadow: 0 0 7px 1px $headerColor;
   border: 0.2vw solid $headerColor;
   border-radius: 1.3vw;
+  transition-duration: 300ms;
 }
 
 .tasks__task {
   width: 60vw;
   margin: 1vw 0;
+  position: absolute;
   display: flex;
   align-items: center;
+  opacity: 0;
 }
 
 .tasks__task--confirm {
