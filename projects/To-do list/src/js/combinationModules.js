@@ -1,6 +1,5 @@
 import SelectionMenu from './moduleSelectionMenu';
 import CreateNewTask from './moduleCreateNewTask';
-import GenerationTask from './moduleGenerationTask';
 import LoadData from './loadData';
 
 const ModuleCreateNewTask = new CreateNewTask();
@@ -16,3 +15,5 @@ ModuleCreateNewTask.generateEvents();
 ModuleCreateNewTask.clearInputs();
 ModuleSelectionMenu.generateEventForSwitchMenu();
 ModuleLoadData.convertDataFromStorage();
+
+window.onunload = () => ModuleLoadData.saveData();

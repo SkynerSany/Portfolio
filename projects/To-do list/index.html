@@ -17,10 +17,10 @@
     </header>
     <main class="main">
       <aside class="createNewTask">
-        <form action="" class="createNewTask__form">
+        <form class="createNewTask__form">
           <div class="createNewTask__textContainer">
             <label for="title" class="createNewTask__itemDescription">Header:</label>
-            <input type="text" name="text" id="title" class="createNewTask__title">
+            <input type="text" name="text" id="title" class="createNewTask__title" required>
             <label for="description" class="createNewTask__itemDescription">Description:</label>
             <textarea name="description" id="description" cols="30" rows="10" class="createNewTask__description"></textarea>
           </div>
@@ -34,31 +34,11 @@
               <li class="createNewTask__color createNewTask__color--orange"></li>
               <li class="createNewTask__color createNewTask__color--green"></li>
             </ul>
-            <input type="button" value="Save" class="createNewTask__submitBtn">
+            <button class="createNewTask__submitBtn">Save</button>
           </div>
         </form>
       </aside>
-      <section class="tasks">
-        <!-- <div class="tasks__taskContainer">
-          <div class="tasks__headerBox">
-            <div class="tasks__dataBox">
-              <div class="tasks__importanceBox"></div>
-              <p class="tasks__date">Today tasks</p>
-            </div>
-            <button class="tasks__openTaskBtn"><img src="./src/assets/images/arrow.svg" alt="arrow" class="tasks__openTaskBtnIcon"></button>
-          </div>
-          <div class="tasks__list">
-            <div class="tasks_task">
-              <div class="tasks__importanceBox"></div>
-              <div class="tasks__data">
-                <p class="tasks__title">sdfsdfsf</p>
-                <p class="tasks__description">sdfsdfdsfsf</p>
-              </div>
-              <button class="tasks__confirmationBtn"></button>
-            </div>
-          </div>
-        </div> -->
-      </section>
+      <section class="tasks"></section>
     </main>
     <footer class="footer">
 

@@ -1,3 +1,5 @@
+import LoadData from './loadData';
+
 export default class CreateNewTask {
   constructor() {
     this.createNewTaskContainer = document.querySelector('.createNewTask');
@@ -8,6 +10,8 @@ export default class CreateNewTask {
     this.date = document.querySelector('.createNewTask__date');
     this.colorBox = document.querySelector('.createNewTask__colorsBox');
     this.openTaskContainerClass = 'createNewTask--open';
+    this.task = document.querySelector('.tasks__task');
+    this.LoadData = new LoadData();
   }
 
   openBox() {
@@ -29,30 +33,6 @@ export default class CreateNewTask {
     this.colorBox.style.backgroundColor = '#ffffff';
   }
 
-  saveTask() {
-    const data = {
-      title: this.title.value,
-      description: this.description.value,
-      importance: this.colorBox.style.backgroundColor,
-    };
-    if (localStorage.tasks) {
-      let obj = JSON.parse(localStorage.tasks);
-      if (obj[this.date.value]) {
-        obj[this.date.value].push(data);
-      } else {
-        obj[this.date.value] = [data];
-        const sortingObj = Object.keys(obj).sort().reduce((object, key) => {
-          object[key] = obj[key];
-          return object;
-        }, {});
-        obj = sortingObj;
-      }
-      localStorage.tasks = JSON.stringify(obj);
-    } else {
-      localStorage.tasks = JSON.stringify({ [this.date.value]: [data] });
-    }
-  }
-
   generateEvents() {
     this.createNewTaskBtn.addEventListener('click', () => {
       if (this.createNewTaskContainer.classList.contains(this.openTaskContainerClass)) {
@@ -62,14 +42,13 @@ export default class CreateNewTask {
       }
     });
 
-    document.querySelector('.main').addEventListener('click', (e) => {
-      if (!e.path.includes(this.createNewTaskContainer) && this.createNewTaskContainer.classList.contains(this.openTaskContainerClass)) this.closeBox();
-    });
-
     this.submitBtn.addEventListener('click', () => {
-      this.saveTask();
-      this.clearInputs();
-      this.closeBox();
+      if (this.title.value) {
+        this.LoadData.saveTask(this.title.value, this.description.value, this.colorBox.style.backgroundColor, 'unconfirm', this.date.value);
+        this.LoadData.convertDataFromStorage();
+        this.clearInputs();
+        this.closeBox();
+      }
     });
   }
 }
