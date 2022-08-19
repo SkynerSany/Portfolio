@@ -15,9 +15,9 @@ export default class GenerationTask {
     document.querySelector('.tasks').appendChild(this.tasksContainerHTML[0]);
   }
 
-  generationTask(taskBox) {
+  generationTask(taskBox, confirmation) {
     this.taskBoxHTML = this.mergeToDOM(taskBox);
-    this.findTitleAndBtn(this.taskBoxHTML);
+    this.findTitleAndBtn(this.taskBoxHTML, confirmation);
     this.tasksContainerHTML[this.tasksContainerHTML.length - 1].appendChild(this.taskBoxHTML[0]);
   }
 
@@ -69,7 +69,7 @@ export default class GenerationTask {
     this.tasksOpenBtn.childNodes[0].classList.toggle('tasks__openTaskBtnIcon--opened');
   }
 
-  findTitleAndBtn(arr) {
+  findTitleAndBtn(arr, confirmation) {
     const titleAndBtnArr = [];
     arr.forEach((item) => {
       if (item.classList.contains('tasks__task') || item.classList.contains('tasks__confirmationBtn')) {
@@ -77,6 +77,7 @@ export default class GenerationTask {
       }
     });
     this.eventConfirmation(titleAndBtnArr[1], titleAndBtnArr[0]);
+    if (confirmation) titleAndBtnArr[1].click();
   }
 
   eventConfirmation(confirmationBtn, taskTitle) {

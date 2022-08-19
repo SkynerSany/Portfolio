@@ -1,6 +1,5 @@
 import SelectionMenu from './moduleSelectionMenu';
 import CreateNewTask from './moduleCreateNewTask';
-import GenerationTask from './moduleGenerationTask';
 import LoadData from './loadData';
 
 const ModuleCreateNewTask = new CreateNewTask();
@@ -17,11 +16,4 @@ ModuleCreateNewTask.clearInputs();
 ModuleSelectionMenu.generateEventForSwitchMenu();
 ModuleLoadData.convertDataFromStorage();
 
-(function openTodayTasks() {
-  document.querySelectorAll('.tasks__headerBox').forEach((element) => {
-    if (element.firstChild.lastChild.textContent === new Date().toISOString().slice(0, 10)) {
-      element.firstChild.lastChild.textContent = 'Today Tasks';
-      element.lastChild.click();
-    }
-  });
-}());
+window.onunload = () => ModuleLoadData.saveData();

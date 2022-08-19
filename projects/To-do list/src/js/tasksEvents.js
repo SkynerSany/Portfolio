@@ -12,6 +12,7 @@ export default class TasksEvents {
     this.confirmationBtn.addEventListener('click', () => {
       this.switchConfirmation();
       this.taskTitle.childNodes.forEach(item => item.classList.toggle('tasks__task--confirm'));
+      this.confirmationBtn.parentElement.dataset.confirm = this.confirmationBtn.parentElement.dataset.confirm === 'unconfirm' ? 'confirm' : 'unconfirm';
     });
   }
 }

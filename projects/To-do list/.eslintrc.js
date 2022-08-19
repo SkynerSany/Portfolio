@@ -3,5 +3,7 @@ module.exports = {
   globals: {
     window: true,
     document: true,
+    localStorage: true,
+    getComputedStyle: true,
   },
 };

@@ -6,6 +6,7 @@ export default class LoadData {
       {
         div: {
           class: 'tasks__task',
+          'data-confirm': 'unconfirm',
         },
       },
       {
@@ -96,10 +97,10 @@ export default class LoadData {
     ];
   }
 
-  clearOlderTasks() {
+  removeOlderTasks() {
     if (localStorage.tasks) {
       const data = JSON.parse(localStorage.tasks);
-      Object.keys(data).forEach(key => {
+      Object.keys(data).forEach((key) => {
         if (key < new Date().toISOString().slice(0, 10)) delete data[key];
       });
       localStorage.tasks = JSON.stringify(data);
@@ -107,9 +108,22 @@ export default class LoadData {
     }
   }
 
+  clearTable() {
+    document.querySelector('.tasks').replaceChildren();
+  }
+
+  renameTodayTasks() {
+    document.querySelectorAll('.tasks__headerBox').forEach((element) => {
+      if (element.firstChild.lastChild.textContent === new Date().toISOString().slice(0, 10)) {
+        element.firstChild.lastChild.textContent = 'Today Tasks';
+      }
+    });
+  }
+
   convertDataFromStorage() {
+    this.clearTable();
     if (localStorage.tasks) {
-      const data = this.clearOlderTasks();
+      const data = this.removeOlderTasks();
       Object.keys(data).forEach((key) => {
         const moduleGenerationTask = new GenerationTask();
         this.tasksContainer.forEach((item) => {
@@ -128,10 +142,56 @@ export default class LoadData {
               item.div.style = `background-color: ${elem.importance}`;
             }
           });
-          moduleGenerationTask.generationTask(this.taskBox);
+          moduleGenerationTask.generationTask(this.taskBox, (elem.taskConfirm === 'confirm'));
         });
         moduleGenerationTask.openDayTasksEvent();
       });
+      this.renameTodayTasks();
+      if (document.querySelector('.tasks__openTaskBtn')) document.querySelector('.tasks__openTaskBtn').click();
     }
+  }
+
+  saveTask(title, description, importance, taskConfirm, date) {
+    const data = {
+      title,
+      description,
+      importance,
+      taskConfirm,
+    };
+    if (localStorage.tasks) {
+      let obj = JSON.parse(localStorage.tasks);
+      if (obj[date]) {
+        obj[date].push(data);
+      } else {
+        obj[date] = [data];
+        const sortingObj = Object.keys(obj).sort().reduce((object, key) => {
+          object[key] = obj[key];
+          return object;
+        }, {});
+        obj = sortingObj;
+      }
+      localStorage.tasks = JSON.stringify(obj);
+    } else {
+      localStorage.tasks = JSON.stringify({ [date]: [data] });
+    }
+  }
+
+  saveData() {
+    localStorage.tasks = '{}';
+    document.querySelectorAll('.tasks__taskContainer').forEach((item) => {
+      item.lastChild.childNodes.forEach((element) => {
+        const taskValues = [];
+        taskValues.push(element.childNodes[1].firstChild.textContent);
+        taskValues.push(element.childNodes[1].lastChild.textContent);
+        taskValues.push(getComputedStyle(element.firstChild).backgroundColor);
+        taskValues.push(element.dataset.confirm);
+        if (item.firstChild.firstChild.lastChild.textContent !== 'Today Tasks') {
+          taskValues.push(item.firstChild.firstChild.lastChild.textContent);
+        } else {
+          taskValues.push(new Date().toISOString().slice(0, 10));
+        }
+        this.saveTask(...taskValues);
+      });
+    });
   }
 }

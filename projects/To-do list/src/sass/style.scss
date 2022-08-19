@@ -366,6 +366,8 @@ input {
 }
 
 .tasks__description {
+  width: 50vw;
+  word-break: break-word;
   font-size: 1vw;
   color: $textColor;
 }
