@@ -12,6 +12,10 @@ $bgColor: #282828;
   font-weight: normal;
 }
 
+body {
+  background-color: $bgColor;
+}
+
 a {
   text-decoration: none;
 }
@@ -31,6 +35,10 @@ input {
   align-content: center;
   background-color: $bgColor;
   border-bottom: 0.2vw solid $headerColor;
+  @media screen and (max-width: 768px) {
+    height: 8vw;
+    border-bottom: 0.4vw solid $headerColor;
+  }
 }
 
 .header__container {
@@ -39,17 +47,26 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    width: 93vw;
+  }
 }
 
 .header__title {
   font-weight: bold;
   font-size: 3vw;
   color: $headerColor;
+  @media screen and (max-width: 768px) {
+    font-size: 5.1vw;
+  }
 }
 
 .header__settingsBtn {
   height: 2vw;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    height: 5vw;
+  }
 }
 
 .header__createNewTaskBtn {
@@ -70,10 +87,17 @@ input {
   &:hover {
     box-shadow: inset 0px 4px 4px 0px rgba(255, 255, 255, 0.5);
   }
+  @media screen and (max-width: 768px) {
+    height: 4.5vw;
+    width: 20vw;
+    top: 3.5vw;
+    margin-left: -10vw;
+    font-size: 2.3vw;
+    border: 0.4vw solid $headerColor;
+  }
 }
 
 .main {
-  min-height: 89.7vh;
   background-color: $bgColor;
 }
 
@@ -91,11 +115,21 @@ input {
   border-radius: 0 0 1vw 1vw;
   border: 0.2vw solid $headerColor;
   transition-duration: 0.3s;
+  @media screen and (max-width: 768px) {
+    height: 60vw;
+    width: 100vw;
+    top: -52vw;
+    left: 0;
+    border: 0.4vw solid $headerColor;
+  }
 }
 
 .createNewTask--open {
   animation: openCreateNewTaskAnimation linear;
   top: 4.85vw;
+  @media screen and (max-width: 768px) {
+    top: 7.7vw;
+  }
 }
 
 .createNewTask__form {
@@ -103,6 +137,13 @@ input {
   width: 75vw;
   display: flex;
   justify-content: space-around;
+  @media screen and (max-width: 768px) {
+    height: 58vw;
+    width: 89vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
 .createNewTask__textContainer {
@@ -122,6 +163,13 @@ input {
   font-size: 1.5vw;
   font-weight: bold;
   outline: none;
+  @media screen and (max-width: 768px) {
+    width: 89vw;
+    height: 6vw;
+    margin-bottom: 2vw;
+    border-radius: 1vw;
+    font-size: 3.4vw;
+  }
 }
 
 .createNewTask__description {
@@ -137,6 +185,12 @@ input {
   &:focus {
     box-shadow: 0 0 7px 1px $headerColor;
   }
+  @media screen and (max-width: 768px) {
+    width: 89vw;
+    height: 20vw;
+    border-radius: 1vw;
+    font-size: 3vw;
+  }
 }
 
 .createNewTask__dataContainer {
@@ -144,6 +198,10 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media screen and (max-width: 768px) {
+    height: 20vw;
+    width: 89vw;
+  }
 }
 
 .createNewTask__date {
@@ -164,6 +222,12 @@ input {
       background: $bgColor;
     }
   }
+  @media screen and (max-width: 768px) {
+    height: 6vw;
+    width: 21vw;
+    border-radius: 1vw;
+    font-size: 2.8vw;
+  }
 }
 
 .createNewTask__colorsBox {
@@ -181,6 +245,11 @@ input {
   &:focus {
     box-shadow: 0 0 7px 1px $headerColor;
   }
+  @media screen and (max-width: 768px) {
+    height: 6vw;
+    width: 21vw;
+    border-radius: 1vw;
+  }
 }
 
 .createNewTask__colors {
@@ -190,6 +259,11 @@ input {
   display: none;
   list-style-type: none;
   border-radius: 0.3vw;
+  @media screen and (max-width: 768px) {
+    top: 38.6vw;
+    left: 31vw;
+    width: 21vw;
+  }
 }
 
 .createNewTask__color {
@@ -204,6 +278,11 @@ input {
   box-shadow: inset 0px 0px 20px 0px $bgColor;
   &:hover {
     box-shadow: 0 0 7px 1px $headerColor;
+  }
+  @media screen and (max-width: 768px) {
+    height: 6vw;
+    width: 21vw;
+    border-radius: 1vw;
   }
 }
 
@@ -222,6 +301,9 @@ input {
 .createNewTask__itemDescription {
   font-size: 1.3vw;
   color: $headerColor;
+  @media screen and (max-width: 768px) {
+    font-size: 2.5vw;
+  }
 }
 
 .createNewTask__submitBtn {
@@ -242,6 +324,14 @@ input {
   &:hover {
     box-shadow: 0 0 7px 1px $headerColor;
   }
+  @media screen and (max-width: 768px) {
+    height: 6vw;
+    width: 21vw;
+    border-radius: 1vw;
+    font-size: 3.5vw;
+    bottom: 1.4vw;
+    right: 5.2vw;
+  }
 }
 
 .tasks {
@@ -253,6 +343,10 @@ input {
   align-items: center;
   justify-content: space-around;
   cursor: default;
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    margin-left: 0;
+  }
 }
 
 .tasks__taskContainer {
@@ -263,6 +357,9 @@ input {
   align-items: center;
   justify-content: space-between;
   background-color: #282828;
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+  }
 }
 
 .tasks__headerBox {
@@ -277,6 +374,12 @@ input {
   border: 0.2vw solid $headerColor;
   border-radius: 1.3vw;
   z-index: 1;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    height: 10vw;
+    width: 92vw;
+    border-radius: 2vw;
+  }
 }
 
 .tasks__dataBox {
@@ -291,12 +394,20 @@ input {
   border-radius: 1vw;
   background-color: #ffffff;
   box-shadow: inset 0px 0px 20px 0px $bgColor;
+  @media screen and (max-width: 768px) {
+    height: 6vw;
+    width: 2vw;
+    margin: 2vw;
+  }
 }
 
 .tasks__date {
   font-size: 2.4vw;
   font-weight: bold;
   color: $headerColor;
+  @media screen and (max-width: 768px) {
+    font-size: 4.9vw;
+  }
 }
 
 .tasks__openTaskBtn {
@@ -313,12 +424,20 @@ input {
   &:hover {
     box-shadow: 0 0 7px 1px $headerColor;
   }
+  @media screen and (max-width: 768px) {
+    height: 6vw;
+    width: 6vw;
+    margin: 2vw;
+  }
 }
 
 .tasks__openTaskBtnIcon {
   height: 1vw;
   transform: rotate(90deg);
   transition-duration: 300ms;
+  @media screen and (max-width: 768px) {
+    height: 3vw;
+  }
 }
 
 .tasks__openTaskBtnIcon--opened {
@@ -338,6 +457,10 @@ input {
   border: 0.2vw solid $headerColor;
   border-radius: 1.3vw;
   transition-duration: 300ms;
+  @media screen and (max-width: 768px) {
+    width: 81.5vw;
+    border-radius: 2vw;
+  }
 }
 
 .tasks__task {
@@ -347,6 +470,9 @@ input {
   display: flex;
   align-items: center;
   opacity: 0;
+  @media screen and (max-width: 768px) {
+    width: 80vw;
+  }
 }
 
 .tasks__task--confirm {
@@ -355,6 +481,9 @@ input {
 
 .tasks__data {
   width: 52vw;
+  @media screen and (max-width: 768px) {
+    width: 62vw;
+  }
 }
 
 .tasks__title {
@@ -363,6 +492,10 @@ input {
   color: $headerColor;
   line-height: 1.6vw;
   text-transform: capitalize;
+  @media screen and (max-width: 768px) {
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+  }
 }
 
 .tasks__description {
@@ -370,6 +503,10 @@ input {
   word-break: break-word;
   font-size: 1vw;
   color: $textColor;
+  @media screen and (max-width: 768px) {
+    width: 61vw;
+    font-size: 1.5vw;
+  }
 }
 
 .tasks__confirmationBtn {
@@ -396,12 +533,29 @@ input {
     position: absolute;
     z-index: 1;
   }
+  @media screen and (max-width: 768px) {
+    width: 10vw;
+    height: 6vw;
+    border-radius: 3vw;
+    &::after {
+      content: "";
+      height: 5.5vw;
+      width: 5.5vw;
+      top: 0.25vw;
+      left: 0.25vw;
+    }
+  }
 }
 
 .switchOn {
   background-color: #10C200;
   &::after {
     left: 2.55vw;
+  }
+  @media screen and (max-width: 768px) {
+    &::after {
+      left: 4.3vw;
+    }
   }
 }
 
