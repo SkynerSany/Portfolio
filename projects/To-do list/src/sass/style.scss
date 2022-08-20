@@ -36,7 +36,7 @@ input {
   background-color: $bgColor;
   border-bottom: 0.2vw solid $headerColor;
   @media screen and (max-width: 768px) {
-    height: 8vw;
+    height: 13vw;
     border-bottom: 0.4vw solid $headerColor;
   }
 }
@@ -57,7 +57,7 @@ input {
   font-size: 3vw;
   color: $headerColor;
   @media screen and (max-width: 768px) {
-    font-size: 5.1vw;
+    font-size: 9vw;
   }
 }
 
@@ -65,7 +65,7 @@ input {
   height: 2vw;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-    height: 5vw;
+    height: 9vw;
   }
 }
 
@@ -88,12 +88,13 @@ input {
     box-shadow: inset 0px 4px 4px 0px rgba(255, 255, 255, 0.5);
   }
   @media screen and (max-width: 768px) {
-    height: 4.5vw;
-    width: 20vw;
-    top: 3.5vw;
-    margin-left: -10vw;
-    font-size: 2.3vw;
+    height: 6vw;
+    width: 24vw;
+    top: 7vw;
+    margin-left: 6vw;
+    font-size: 3vw;
     border: 0.4vw solid $headerColor;
+    border-radius: 2vw 2vw 0 0;
   }
 }
 
@@ -116,11 +117,13 @@ input {
   border: 0.2vw solid $headerColor;
   transition-duration: 0.3s;
   @media screen and (max-width: 768px) {
-    height: 60vw;
+    height: 76vw;
     width: 100vw;
-    top: -52vw;
+    top: -63vw;
     left: 0;
-    border: 0.4vw solid $headerColor;
+    border: none;
+    border-bottom: 0.4vw solid $headerColor;
+    border-radius: initial;
   }
 }
 
@@ -128,7 +131,7 @@ input {
   animation: openCreateNewTaskAnimation linear;
   top: 4.85vw;
   @media screen and (max-width: 768px) {
-    top: 7.7vw;
+    top: 12.7vw;
   }
 }
 
@@ -138,7 +141,7 @@ input {
   display: flex;
   justify-content: space-around;
   @media screen and (max-width: 768px) {
-    height: 58vw;
+    height: 74vw;
     width: 89vw;
     flex-direction: column;
     justify-content: space-evenly;
@@ -165,10 +168,10 @@ input {
   outline: none;
   @media screen and (max-width: 768px) {
     width: 89vw;
-    height: 6vw;
+    height: 8vw;
     margin-bottom: 2vw;
     border-radius: 1vw;
-    font-size: 3.4vw;
+    font-size: 4.5vw;
   }
 }
 
@@ -189,7 +192,7 @@ input {
     width: 89vw;
     height: 20vw;
     border-radius: 1vw;
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }
 
@@ -199,7 +202,7 @@ input {
   flex-direction: column;
   justify-content: space-around;
   @media screen and (max-width: 768px) {
-    height: 20vw;
+    height: 28vw;
     width: 89vw;
   }
 }
@@ -223,10 +226,10 @@ input {
     }
   }
   @media screen and (max-width: 768px) {
-    height: 6vw;
-    width: 21vw;
+    height: 8vw;
+    width: 26vw;
     border-radius: 1vw;
-    font-size: 2.8vw;
+    font-size: 3.6vw;
   }
 }
 
@@ -246,8 +249,8 @@ input {
     box-shadow: 0 0 7px 1px $headerColor;
   }
   @media screen and (max-width: 768px) {
-    height: 6vw;
-    width: 21vw;
+    height: 8vw;
+    width: 26vw;
     border-radius: 1vw;
   }
 }
@@ -260,9 +263,9 @@ input {
   list-style-type: none;
   border-radius: 0.3vw;
   @media screen and (max-width: 768px) {
-    top: 38.6vw;
-    left: 31vw;
-    width: 21vw;
+    top: 48.1vw;
+    left: 34vw;
+    width: 26vw;
   }
 }
 
@@ -280,8 +283,8 @@ input {
     box-shadow: 0 0 7px 1px $headerColor;
   }
   @media screen and (max-width: 768px) {
-    height: 6vw;
-    width: 21vw;
+    height: 8vw;
+    width: 26vw;
     border-radius: 1vw;
   }
 }
@@ -302,7 +305,7 @@ input {
   font-size: 1.3vw;
   color: $headerColor;
   @media screen and (max-width: 768px) {
-    font-size: 2.5vw;
+    font-size: 4vw;
   }
 }
 
@@ -325,12 +328,12 @@ input {
     box-shadow: 0 0 7px 1px $headerColor;
   }
   @media screen and (max-width: 768px) {
-    height: 6vw;
-    width: 21vw;
+    height: 8vw;
+    width: 26vw;
     border-radius: 1vw;
-    font-size: 3.5vw;
-    bottom: 1.4vw;
-    right: 5.2vw;
+    font-size: 4vw;
+    bottom: 2.3vw;
+    right: 5.5vw;
   }
 }
 
@@ -376,9 +379,10 @@ input {
   z-index: 1;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-    height: 10vw;
+    height: 13vw;
     width: 92vw;
-    border-radius: 2vw;
+    border-radius: 3vw;
+    border: 0.4vw solid $headerColor;
   }
 }
 
@@ -395,7 +399,7 @@ input {
   background-color: #ffffff;
   box-shadow: inset 0px 0px 20px 0px $bgColor;
   @media screen and (max-width: 768px) {
-    height: 6vw;
+    height: 8vw;
     width: 2vw;
     margin: 2vw;
   }
@@ -406,7 +410,7 @@ input {
   font-weight: bold;
   color: $headerColor;
   @media screen and (max-width: 768px) {
-    font-size: 4.9vw;
+    font-size: 8vw;
   }
 }
 
@@ -425,8 +429,8 @@ input {
     box-shadow: 0 0 7px 1px $headerColor;
   }
   @media screen and (max-width: 768px) {
-    height: 6vw;
-    width: 6vw;
+    height: 8vw;
+    width: 8vw;
     margin: 2vw;
   }
 }
@@ -436,7 +440,7 @@ input {
   transform: rotate(90deg);
   transition-duration: 300ms;
   @media screen and (max-width: 768px) {
-    height: 3vw;
+    height: 5vw;
   }
 }
 
@@ -460,6 +464,7 @@ input {
   @media screen and (max-width: 768px) {
     width: 81.5vw;
     border-radius: 2vw;
+    border: 0.4vw solid $headerColor;
   }
 }
 
@@ -493,8 +498,11 @@ input {
   line-height: 1.6vw;
   text-transform: capitalize;
   @media screen and (max-width: 768px) {
-    font-size: 3.5vw;
+    font-size: 4vw;
     line-height: 4.5vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -505,7 +513,10 @@ input {
   color: $textColor;
   @media screen and (max-width: 768px) {
     width: 61vw;
-    font-size: 1.5vw;
+    font-size: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -534,15 +545,15 @@ input {
     z-index: 1;
   }
   @media screen and (max-width: 768px) {
-    width: 10vw;
-    height: 6vw;
-    border-radius: 3vw;
+    width: 11vw;
+    height: 7vw;
+    border-radius: 4vw;
     &::after {
       content: "";
-      height: 5.5vw;
-      width: 5.5vw;
-      top: 0.25vw;
-      left: 0.25vw;
+      height: 6.3vw;
+      width: 6.3vw;
+      top: 0.35vw;
+      left: 0.35vw;
     }
   }
 }
@@ -554,7 +565,7 @@ input {
   }
   @media screen and (max-width: 768px) {
     &::after {
-      left: 4.3vw;
+      left: 4.4vw;
     }
   }
 }
