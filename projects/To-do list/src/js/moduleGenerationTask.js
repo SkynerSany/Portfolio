@@ -54,8 +54,9 @@ export default class GenerationTask {
 
   openDayTasksEvent() {
     this.tasksOpenBtn = this.tasksContainerHTML.find((element) => this.searchHTMLElements(element, 'tasks__openTaskBtn'));
+    this.taskHeader = this.tasksContainerHTML.find((element) => this.searchHTMLElements(element, 'tasks__headerBox'));
     this.tasksList = this.tasksContainerHTML[this.tasksContainerHTML.length - 1].childNodes;
-    this.tasksOpenBtn.addEventListener('click', () => {
+    this.taskHeader.addEventListener('click', () => {
       this.openDayTask();
     });
   }

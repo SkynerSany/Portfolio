@@ -15,14 +15,14 @@ export default class CreateNewTask {
   }
 
   openBox() {
-    this.createNewTaskBtn.style.borderBottom = '0.2vw solid #282828';
+    this.createNewTaskBtn.style.borderBottom = window.innerWidth <= 768 ? '0.4vw solid #282828' : '0.2vw solid #282828';
     this.createNewTaskContainer.classList.toggle(this.openTaskContainerClass);
   }
 
   closeBox() {
     this.createNewTaskContainer.classList.toggle(this.openTaskContainerClass);
     setTimeout(() => {
-      this.createNewTaskBtn.style.border = '0.2vw solid #F4F4F4';
+      this.createNewTaskBtn.style.border = window.innerWidth <= 768 ? '0.4vw solid #F4F4F4' : '0.2vw solid #F4F4F4';
     }, 300);
   }
 

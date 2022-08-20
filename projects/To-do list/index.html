@@ -20,9 +20,9 @@
         <form class="createNewTask__form">
           <div class="createNewTask__textContainer">
             <label for="title" class="createNewTask__itemDescription">Header:</label>
-            <input type="text" name="text" id="title" class="createNewTask__title" required>
+            <input type="text" name="text" maxlength="28" id="title" class="createNewTask__title" required>
             <label for="description" class="createNewTask__itemDescription">Description:</label>
-            <textarea name="description" id="description" cols="30" rows="10" class="createNewTask__description"></textarea>
+            <textarea name="description" maxlength="164"  id="description" cols="30" rows="10" class="createNewTask__description"></textarea>
           </div>
           <div class="createNewTask__dataContainer">
             <label for="date" class="createNewTask__itemDescription">Date:</label>
