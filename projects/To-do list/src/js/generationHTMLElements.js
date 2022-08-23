@@ -1,23 +1,27 @@
 export default class GenerationHTMLElements {
-  generationElem(tag, attr) {
-    const elem = document.createElement(tag);
-    Object.keys(attr).forEach((key) => {
+  generationElement(tag, attributes) {
+    const node = document.createElement(tag);
+
+    Object.keys(attributes).forEach((key) => {
       if (key === 'textContent') {
-        elem.textContent = attr[key];
+        node.textContent = attributes[key];
       } else if (key !== 'parentClass') {
-        elem.setAttribute(key, attr[key]);
+        node.setAttribute(key, attributes[key]);
       }
     });
-    return elem;
+
+    return node;
   }
 
-  addChild(parent, arr) {
-    const result = arr;
-    arr.forEach((item, i) => {
+  addChild(parent, childsArray) {
+    const result = childsArray;
+
+    childsArray.forEach((item, i) => {
       if (item.classList.contains(parent)) {
-        result[i].appendChild(arr[arr.length - 1]);
+        result[i].appendChild(childsArray[childsArray.length - 1]);
       }
     });
+
     return result;
   }
 }
