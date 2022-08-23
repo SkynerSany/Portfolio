@@ -52,6 +52,7 @@ export default class CreateNewTask {
 
     submitBtn.addEventListener('click', () => {
       const formInputs = this.getFormInputs();
+
       if (formInputs.title.value) {
         saveData.saveTask(
           formInputs.title.value,
@@ -60,6 +61,7 @@ export default class CreateNewTask {
           'unconfirm',
           formInputs.date.value,
         );
+
         generationTask.addTasksToDOM();
         this.clearInputs();
         this.closeBox();
