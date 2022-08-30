@@ -1,12 +1,14 @@
 import Task from './task';
 import GenerationHTMLElements from './generationHTMLElements';
 import TasksEvents from './tasksEvents';
+import Language from './language';
 import * as DOMNodes from './DOMNodes';
 
 export default class GenerationTask {
   constructor() {
     this.taskBox = DOMNodes.taskBox;
     this.tasksContainer = DOMNodes.tasksContainer;
+    this.language = new Language();
   }
 
   removeOlderTasks() {
@@ -23,14 +25,6 @@ export default class GenerationTask {
 
   clearTable() {
     document.querySelector('.tasks').replaceChildren();
-  }
-
-  renameTodayTasks() {
-    document.querySelectorAll('.tasks__headerBox').forEach((element) => {
-      if (element.firstChild.lastChild.textContent === new Date().toISOString().slice(0, 10)) {
-        element.firstChild.lastChild.textContent = 'Today Tasks';
-      }
-    });
   }
 
   confirmationEvent(confirmationBtn, taskTitle) {
@@ -82,7 +76,11 @@ export default class GenerationTask {
   addTasksBox(key) {
     this.tasksContainer.forEach((element) => {
       if (element.p) {
-        element.p.textContent = key;
+        if (key === new Date().toISOString().slice(0, 10)) {
+          element.p.textContent = this.language[document.querySelector('.header__selectedLang').textContent.toLocaleLowerCase()].tasks__date;
+        } else {
+          element.p.textContent = key;
+        }
       }
     });
   }
@@ -119,7 +117,6 @@ export default class GenerationTask {
       task.openDayTasksEvent();
     });
 
-    this.renameTodayTasks();
     if (document.querySelector('.tasks__openTaskBtn')) document.querySelector('.tasks__openTaskBtn').click();
   }
 }

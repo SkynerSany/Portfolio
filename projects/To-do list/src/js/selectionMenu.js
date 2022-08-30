@@ -1,29 +1,34 @@
 export default class SelectionMenu {
-  constructor(selectionBox, selectionItem) {
-    this.selectionBox = document.querySelector(`.${selectionBox}`);
-    this.selectionItem = document.querySelector(`.${selectionItem}`);
+  constructor(box, item, type) {
+    this.box = document.querySelector(`.${box}`);
+    this.item = document.querySelector(`.${item}`);
+    this.itemType = type;
   }
 
   selectionMenuEvent() {
-    this.selectionBox.addEventListener('click', () => {
-      if (window.getComputedStyle(this.selectionItem).display === 'none') {
-        this.selectionItem.style.display = 'block';
+    this.box.addEventListener('click', () => {
+      if (window.getComputedStyle(this.item).display === 'none') {
+        this.item.style.display = 'block';
       } else {
-        this.selectionItem.style.display = 'none';
+        this.item.style.display = 'none';
       }
     });
 
-    this.selectionBox.addEventListener('blur', () => {
-      if (!Array.from(document.querySelectorAll(':hover')).includes(this.selectionItem)) {
-        this.selectionItem.style.display = 'none';
+    this.box.addEventListener('blur', () => {
+      if (!Array.from(document.querySelectorAll(':hover')).includes(this.item)) {
+        this.item.style.display = 'none';
       }
     });
 
-    this.selectionItem.addEventListener('click', (e) => {
+    this.item.addEventListener('click', (e) => {
       if (e.target.tagName === 'LI') {
-        this.selectionBox.style.backgroundColor = window.getComputedStyle(e.target).backgroundColor;
+        if (this.itemType === 'color') {
+          this.box.style.backgroundColor = window.getComputedStyle(e.target).backgroundColor;
+        } else if (this.itemType === 'text') {
+          this.box.textContent = e.target.textContent;
+        }
       }
-      this.selectionItem.style.display = 'none';
+      this.item.style.display = 'none';
     });
   }
 }

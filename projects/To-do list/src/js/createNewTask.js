@@ -62,6 +62,7 @@ export default class CreateNewTask {
           formInputs.date.value,
         );
 
+        generationTask.removeOlderTasks();
         generationTask.addTasksToDOM();
         this.clearInputs();
         this.closeBox();
