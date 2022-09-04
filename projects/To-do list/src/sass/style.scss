@@ -43,12 +43,13 @@ input {
 
 .header__container {
   width: 84vw;
-  margin: auto;
+  margin-left: 8vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   @media screen and (max-width: 768px) {
     width: 93vw;
+    margin-left: 4vw;
   }
 }
 
@@ -58,6 +59,65 @@ input {
   color: $headerColor;
   @media screen and (max-width: 768px) {
     font-size: 9vw;
+  }
+}
+
+.header__langBox {
+  height: 4.9vw;
+  width: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  border-left: 0.2vw solid $headerColor;
+  border-right: 0.2vw solid $headerColor;
+  background-color: $bgColor;
+  color: $headerColor;
+  user-select: none;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    height: 12.9vw;
+    width: 12.9vw;
+    font-size: 7vw;
+    border-left: 0.4vw solid $headerColor;
+    border-right: 0.4vw solid $headerColor;
+  }
+}
+
+.header__selectedLang {
+  display: flex;
+  height: inherit;
+  width: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__langList {
+  width: 7vw;
+  top: 4.7vw;
+  position: absolute;
+  display: none;
+  list-style-type: none;
+  border: 0.2vw solid $headerColor;
+  border-top: none;
+  border-bottom-right-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  display: none;
+  background-color: $bgColor;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    width: 12.9vw;
+    top: 10.7vw;
+    border: 0.4vw solid $headerColor;
+    border-top: none;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+  }
+}
+
+.header__lang {
+  &:hover {
+    box-shadow: inset 0px 0px 20px 0px rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -71,10 +131,10 @@ input {
 
 .header__createNewTaskBtn {
   height: 2.15vw;
-  width: 10vw;
+  width: 12vw;
   position: absolute;
-  left: 50%;
-  top: 2.83vw;
+  left: 48vw;
+  top: 2.86vw;
   margin-left: -4vw;
   background-color: $bgColor;
   border-radius: 1vw 1vw 0 0;
@@ -89,9 +149,9 @@ input {
   }
   @media screen and (max-width: 768px) {
     height: 6vw;
-    width: 24vw;
+    width: 31vw;
     top: 7vw;
-    margin-left: 6vw;
+    margin-left: 3vw;
     font-size: 3vw;
     border: 0.4vw solid $headerColor;
     border-radius: 2vw 2vw 0 0;
@@ -128,6 +188,7 @@ input {
 }
 
 .createNewTask--open {
+  -webkit-animation: openCreateNewTaskAnimation linear;
   animation: openCreateNewTaskAnimation linear;
   top: 4.85vw;
   @media screen and (max-width: 768px) {
@@ -567,6 +628,15 @@ input {
     &::after {
       left: 4.4vw;
     }
+  }
+}
+
+@-webkit-keyframes openCreateNewTaskAnimation {
+  0% {
+    top: -30vw;
+  }
+  100% {
+    top: 4.85vw;
   }
 }
 

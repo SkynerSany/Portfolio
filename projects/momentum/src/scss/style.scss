@@ -9,6 +9,7 @@
     font-weight: 600;
     color: #ffffff;
     transition: background-image 1s ease-in-out;
+    text-shadow: 0 0 2px black;
     cursor: default;
 }
 
@@ -32,18 +33,18 @@
     left: 1vw;
     height: 3vw;
     width: 3vw;
-    background: url('/Portfolio/projects/momentum/src/assets/images/icons/cameraswitch.png');
+    background: url('/src/assets/images/icons/cameraswitch.svg');
     border: none;
     border-radius: 50%;
-    background-size: 2.3vw;
+    background-size: 1.6vw;
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.5);
     background-position: center;
+    box-shadow: 0 0 20px 0px #000000;
     cursor: pointer;
     outline: none;
     &:hover {
-        animation: animationBtn 0.2s;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.8);
     }
     @media(max-width: 768px) {
         height: 7vw;
@@ -77,21 +78,21 @@
 
 .quotes__refresh {
     margin-right: 1vw;
-    height: 1.3vw;
-    width: 1.3vw;
+    height: 2vw;
+    width: 2vw;
     float: left;
-    background: url('/Portfolio/projects/momentum/src/assets/images/icons/refresh-page-option.svg');
+    background: url('/src/assets/images/icons/refresh-page-option.svg');
     border: none;
     border-radius: 50%;
     background-size: 1vw;
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.5);
     background-position: center;
+    box-shadow: 0 0 20px 0px #000000;
     cursor: pointer;
     outline: none;
     &:hover {
-        animation: animationBtn 0.2s;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.8);
         
     }
     @media(max-width: 768px) {
@@ -102,13 +103,10 @@
 }
 
 .time__text {
-    width: 44vw;
-    display: block;
+    display: flex;
+    justify-content: center;
     font-size: 8vw;
     line-height: 7vw;
-    span {
-        display: unset;
-    }
     @media(max-width: 768px) {
         width: 70vw;
         font-size: 12vw;
@@ -123,6 +121,12 @@
 
 .numbers {
     width: 9vw;
+    padding: 0 2vw;
+    display: flex;
+    justify-content: center;
+    &:nth-child(5) {
+        justify-content: flex-start;
+    }
 }
 
 .time__date {
@@ -156,6 +160,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: inset 0px 0px 20px 0px #000000;
     @media(max-width: 768px) {
         width: 38vw;
     }
@@ -237,31 +242,13 @@
     height: 100vh;
     width: 100vw;
     bottom: 0vw;
-    background: url('/Portfolio/projects/momentum/src/assets/images/wait.svg');
+    background: url('/src/assets/images/wait.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-@keyframes animationBtn {
-    0% {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-    25% {
-        background-color: rgba(255, 255, 255, 0.65);
-    }
-    50% {
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-    75% {
-        background-color: rgba(255, 255, 255, 0.9);
-    }
-    100% {
-        background-color: rgba(255, 255, 255, 1);
-    }
-}
-
 @font-face {
     font-family: "Quicksand";
-    src: url('/Portfolio/projects/momentum/src/assets/fonts/Quicksand.ttf');
+    src: url('/src/assets/fonts/Quicksand.ttf');
 }
