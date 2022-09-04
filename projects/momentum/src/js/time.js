@@ -1,33 +1,33 @@
 export default class Time {
   constructor() {
-    this.timeBox = document.querySelector('.time__text');
-    this.dateBox = document.querySelector('.time__date');
-    this.greeting = document.querySelector('.greeting__text');
-    this.body = document.querySelector('.body');
+    this.timeBox = document.querySelector(".time__text");
+    this.dateBox = document.querySelector(".time__date");
+    this.greeting = document.querySelector(".greeting__text");
+    this.body = document.querySelector(".body");
     this.week = [
-      'Sunday',
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
     ];
     this.months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
     ];
-    this.dayTime = 'Morning';
+    this.dayTime = "Morning";
     this.bgMas = [];
     this.timeNumbers = [];
     this.curentBg = null;
@@ -46,7 +46,7 @@ export default class Time {
     this.sendTime(
       this.addZero(this.timeNumbers[0]),
       this.addZero(this.timeNumbers[1]),
-      this.addZero(this.timeNumbers[2]),
+      this.addZero(this.timeNumbers[2])
     );
   }
 
@@ -59,7 +59,7 @@ export default class Time {
     this.sendDate(
       `${this.week[this.timeNumbers[3]]}, ${this.timeNumbers[4]} ${
         this.months[this.timeNumbers[5]]
-      }`,
+      }`
     );
   }
 
@@ -87,13 +87,13 @@ export default class Time {
 
   checkTime() {
     if (this.timeNumbers[0] >= 6 && this.timeNumbers[0] < 12) {
-      this.dayTime = 'Morning';
+      this.dayTime = "Morning";
     } else if (this.timeNumbers[0] >= 12 && this.timeNumbers[0] < 18) {
-      this.dayTime = 'Day';
+      this.dayTime = "Day";
     } else if (this.timeNumbers[0] >= 18 && this.timeNumbers[0] < 24) {
-      this.dayTime = 'Evening';
+      this.dayTime = "Evening";
     } else {
-      this.dayTime = 'Night';
+      this.dayTime = "Night";
     }
   }
 
@@ -115,7 +115,7 @@ export default class Time {
         this.tempBg = 0;
       }
 
-      const img = document.createElement('img');
+      const img = document.createElement("img");
       img.src = `./src/assets/images/${this.dayTime}/${this.bgMas[this.tempBg]}.jpg`;
       img.onload = () => {
         this.body.style.backgroundImage = `url('${img.src}')`;
@@ -136,39 +136,39 @@ export default class Time {
 }
 
 (() => {
-  const greetingInput = document.querySelector('.greeting__input');
-  const focusInput = document.querySelector('.focus__input');
-  const switchBgBtn = document.querySelector('.switch-bg');
+  const greetingInput = document.querySelector(".greeting__input");
+  const focusInput = document.querySelector(".focus__input");
+  const switchBgBtn = document.querySelector(".switch-bg");
 
   const time = new Time();
 
   const init = {
     generateEvents() {
-      greetingInput.addEventListener('click', () => {
-        greetingInput.textContent = '';
+      greetingInput.addEventListener("click", () => {
+        greetingInput.textContent = "";
       });
 
-      greetingInput.addEventListener('blur', () => {
-        if (greetingInput.textContent === '') {
+      greetingInput.addEventListener("blur", () => {
+        if (greetingInput.textContent === "") {
           greetingInput.textContent = window.localStorage.name;
         } else {
           window.localStorage.name = greetingInput.textContent;
         }
       });
 
-      focusInput.addEventListener('click', () => {
-        focusInput.textContent = '';
+      focusInput.addEventListener("click", () => {
+        focusInput.textContent = "";
       });
 
-      focusInput.addEventListener('blur', () => {
-        if (focusInput.textContent === '') {
+      focusInput.addEventListener("blur", () => {
+        if (focusInput.textContent === "") {
           focusInput.textContent = window.localStorage.focus;
         } else {
           window.localStorage.focus = focusInput.textContent;
         }
       });
 
-      switchBgBtn.addEventListener('click', () => {
+      switchBgBtn.addEventListener("click", () => {
         switchBgBtn.disabled = true;
         setTimeout(() => {
           switchBgBtn.disabled = false;
@@ -179,8 +179,8 @@ export default class Time {
 
     addToLocalStorage() {
       if (!window.localStorage.name) {
-        window.localStorage.setItem('name', greetingInput.textContent);
-        window.localStorage.setItem('focus', focusInput.textContent);
+        window.localStorage.setItem("name", greetingInput.textContent);
+        window.localStorage.setItem("focus", focusInput.textContent);
       } else {
         greetingInput.textContent = window.localStorage.name;
         focusInput.textContent = window.localStorage.focus;
