@@ -1,0 +1,27 @@
+.settings_button {
+  position: fixed;
+    z-index: 2;
+    bottom: 15px;
+    right: 15px;
+    font-family: monospace;
+    color: #00c4ff;
+    width: 215px;
+    text-align: center;
+}
+
+.settings_button .btn {
+  border: 3px solid;
+    border-radius: 17px;
+    margin-bottom: 10px;
+    font-size: 46px!important;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.settings_button .btn span {
+  cursor: pointer;
+}
+
+.settings_button .btn:hover {
+  background: #ffffff;
+}

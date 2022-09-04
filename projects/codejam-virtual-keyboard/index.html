@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../settings button/btnStyles.css">
+    <title>Virtual-keyboard</title>
+</head>
+<body class="body">
+    <script src="main.js"></script>
+    <p class="description">*The virtual keyboard will not work if the layout on it differs from the actual one!<br>
+                            **Сhanging the layout: alt + shift</p>
+    <div class="settings_button">
+        <div class="settings_button__back btn"><span>Back</span></div>
+    </div>
+    <script>
+        const back = document.querySelector('.settings_button__back');
+
+        back.addEventListener('click', () => {
+        document.location = '../../index.html';
+        });
+    </script>
+</body>
+</html>
