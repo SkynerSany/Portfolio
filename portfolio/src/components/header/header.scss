@@ -1,0 +1,75 @@
+$textColor: #e4e4e4;
+$primaryColor: #00C4F0;
+$bgDark: #2A2A2A;
+$bgLightGradient: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+$orangeGradient: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+
+header {
+  min-height: 787px;
+}
+
+.header__navLink {
+  color: $textColor;
+
+  &:hover {
+    color: $textColor;
+    border-bottom: 1px solid #E29500;
+  }
+}
+
+.header__me {
+  min-height: 700px;
+}
+
+.header__aboutMe {
+  min-height: 377px;
+
+  p {
+    color: $textColor;
+  }
+
+  button {
+    //width: 200px;
+    color: $bgDark;
+    background: $orangeGradient;
+    box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+  }
+}
+
+.header__smallCircle {
+  background: $bgLightGradient;
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primaryColor;
+
+  &1 {
+    bottom: 40px;
+    left: 110px;
+  }
+
+  &2 {
+    bottom: 240px;
+    left: 35px;
+  }
+  
+  &3 {
+    top: 40px;
+    left: 110px;
+  }
+
+  &4 {
+    top: 40px;
+    right: 110px;
+  }
+}
+
+.header__photoCircle {
+  height: 575px;
+  width: 575px;
+  border: 67px solid $primaryColor;
+  box-shadow: 0px 0px 152px rgba(0, 196, 240, 0.42);
+}

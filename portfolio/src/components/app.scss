@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: arodoba;
+}
+
+body {
+  background: linear-gradient(101.56deg, #2C2C2C 1.56%, #1C1C1C 95.55%);
+}
+
+@font-face {
+  font-family: arodoba;
+  src: url(../assets/fonts/ArodoraPro-Light.otf);
+}
+
+@font-face {
+  font-family: NextArt;
+  src: url(../assets/fonts/NextArt_Bold.otf);
+}
+
+.ff-N {
+  font-family: NextArt;
+}
+
+.ff-A {
+  font-family: arodoba;
+}
+
+$font-sizes: (
+  72: '72px',
+  60: '60px',
+  48: '48px',
+  23: '24px',
+  20: '20px',
+  18: '18px'
+);
+
+@import "bootstrap/scss/bootstrap";
