@@ -1,0 +1,9 @@
+@import '../../assets/styles/variables.scss';
+
+#about {
+  min-height: 1850px;
+  display: flex;
+  justify-content: center;
+  background: $bgLightGradient;
+}
+

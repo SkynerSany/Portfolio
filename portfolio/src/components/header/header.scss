@@ -1,39 +1,84 @@
-$textColor: #e4e4e4;
-$primaryColor: #00C4F0;
-$bgDark: #2A2A2A;
-$bgLightGradient: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
-$orangeGradient: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+@import '../../assets/styles/variables.scss';
 
 header {
   min-height: 787px;
+  display: flex;
+  justify-content: center;
+}
+
+.header__nav {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu {
+  width: 710px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__navLink {
-  color: $textColor;
+  font-size: 18px;
 
   &:hover {
-    color: $textColor;
-    border-bottom: 1px solid #E29500;
+    color: orange;
+  }
+
+  &-active {
+    border-bottom: 1px solid orange;
   }
 }
 
 .header__me {
-  min-height: 700px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__aboutMe {
-  min-height: 377px;
+  height: 377px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $textColor;
+}
 
-  p {
-    color: $textColor;
-  }
+.header__greeting {
+  font-size: 48px;
+  font-family: $fontTitle;
+}
 
-  button {
-    //width: 200px;
-    color: $bgDark;
-    background: $orangeGradient;
+.header__name {
+  font-size: 72px;
+  font-family: $fontTitle;
+}
+
+.header__aboutDesc {
+  font-size: 18px;
+  font-family: $fontDesc;
+}
+
+.header__btn {
+  width: 200px;
+  height: 47px;
+  background: $orangeGradient;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 2px 13px black;
+  font-size: 18px;
+  font-family: nextArt;
+  cursor: pointer;
+
+  &:hover {
     box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
   }
+}
+
+.header__photo {
+  position: relative;
 }
 
 .header__smallCircle {
@@ -44,26 +89,29 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  font-size: 48px;
+  font-family: $fontTitle;
   color: $primaryColor;
 
   &1 {
     bottom: 40px;
-    left: 110px;
+    left: 25px;
   }
 
   &2 {
     bottom: 240px;
-    left: 35px;
+    right: 530px;
   }
   
   &3 {
     top: 40px;
-    left: 110px;
+    left: 25px;
   }
 
   &4 {
     top: 40px;
-    right: 110px;
+    right: 25px;
   }
 }
 
@@ -71,5 +119,6 @@ header {
   height: 575px;
   width: 575px;
   border: 67px solid $primaryColor;
+  border-radius: 50%;
   box-shadow: 0px 0px 152px rgba(0, 196, 240, 0.42);
 }
