@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.8dbfe6f3.css",
-    "main.js": "/static/js/main.4ac90e1a.js",
-    "static/media/NextArt_Bold.otf": "/static/media/NextArt_Bold.b2bf4013b59db90ec254.otf",
-    "static/media/ArodoraPro-Light.otf": "/static/media/ArodoraPro-Light.93750f5f4f0e4ed890b1.otf",
-    "static/media/iconSass.svg": "/static/media/iconSass.f9e4908b65c0b955ab75.svg",
-    "index.html": "/index.html",
-    "main.8dbfe6f3.css.map": "/static/css/main.8dbfe6f3.css.map",
-    "main.4ac90e1a.js.map": "/static/js/main.4ac90e1a.js.map"
+    "main.css": "./static/css/main.abe294ad.css",
+    "main.js": "./static/js/main.15490f48.js",
+    "static/media/NextArt_Bold.otf": "./static/media/NextArt_Bold.b2bf4013b59db90ec254.otf",
+    "static/media/ArodoraPro-Light.otf": "./static/media/ArodoraPro-Light.93750f5f4f0e4ed890b1.otf",
+    "static/media/iconSass.svg": "./static/media/iconSass.f9e4908b65c0b955ab75.svg",
+    "index.html": "./index.html",
+    "main.abe294ad.css.map": "./static/css/main.abe294ad.css.map",
+    "main.15490f48.js.map": "./static/js/main.15490f48.js.map"
   },
   "entrypoints": [
-    "static/css/main.8dbfe6f3.css",
-    "static/js/main.4ac90e1a.js"
+    "static/css/main.abe294ad.css",
+    "static/js/main.15490f48.js"
   ]
 }

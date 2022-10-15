@@ -25,11 +25,13 @@
 
 .greeting__greeting {
   font-size: 48px;
+  font-weight: 600;
   font-family: $fontTitle;
 }
 
 .greeting__name {
   font-size: 72px;
+  font-weight: 700;
   font-family: $fontTitle;
 }
 
@@ -51,6 +53,11 @@
 
   &:hover {
     box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+  }
+
+  &:active {
+    background: $primaryColor;
+    box-shadow: 0 0 25px $primaryColor;
   }
 }
 

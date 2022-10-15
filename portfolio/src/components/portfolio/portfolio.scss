@@ -1,0 +1,136 @@
+@import '../../assets/styles/variables.scss';
+
+#portfolio {
+  height: 1000px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    height: 700px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.portfolio__title {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-family: $fontTitle;
+  color: $textColor;
+}
+
+.portfolio__sliderBox {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portfolio__btn {
+  height: 60px;
+  width: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: none;
+  background: $orangeGradient;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 0px 2px 13px black;
+  font-size: 30px;
+  color: $textColor;
+
+  &btnRight {
+    
+  }
+
+  &btnLeft {
+    
+  }
+  
+  &:hover {
+    box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+  }
+
+  &:active {
+    background: $primaryColor;
+    box-shadow: 0 0 25px $primaryColor;
+  }
+}
+
+.portfolio__slider {
+  width: 80%;
+  height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $bgLightGradient;
+  box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
+  border-radius: 29px;
+  -webkit-border-radius: 29px;
+  -moz-border-radius: 29px;
+  -ms-border-radius: 29px;
+  -o-border-radius: 29px;
+}
+
+.portfolio__sliderItem {
+  height: 88%;
+  width: 88%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portfolio__projectImage {
+  width: 500px;
+  height: 500px;
+
+  background-image: url(../../assets/images/repair.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  border-radius: 29px;
+  -webkit-border-radius: 29px;
+  -moz-border-radius: 29px;
+  -ms-border-radius: 29px;
+  -o-border-radius: 29px;
+}
+
+.portfolio__projectInfo {
+  width: 300px;
+  height: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  color: $textColor;
+}
+
+.portfolio__projectName {
+  font-size: 24px;
+}
+
+.portfolio__projectDesc {
+  font-size: 18px;
+  text-align: center;
+}
+
+.portfolio__btnMore {
+  background: none;
+  border: none;
+  color: orange;
+  font-size: 18px;
+}

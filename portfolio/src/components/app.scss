@@ -9,6 +9,7 @@
 body {
   background: linear-gradient(101.56deg, #2C2C2C 1.56%, #1C1C1C 95.55%);
   scroll-behavior: smooth;
+  cursor: default;
 }
 
 a {
@@ -16,8 +17,15 @@ a {
   color: $textColor;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   width: 1200px;
+
+  margin: 0 20px;
+  
   display: flex;
   flex-direction: column;
 }
@@ -29,5 +37,18 @@ a {
 
 @font-face {
   font-family: NextArt;
+  font-weight: 700;
   src: url(../assets/fonts/NextArt_Bold.otf);
+}
+
+@font-face {
+  font-family: NextArt;
+  font-weight: 400;
+  src: url(../assets/fonts/NextArt_Regular.otf);
+}
+
+@font-face {
+  font-family: NextArt;
+  font-weight: 600;
+  src: url(../assets/fonts/NextArt_SemiBold.otf);
 }
