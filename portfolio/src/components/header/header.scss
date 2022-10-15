@@ -1,124 +1,61 @@
 @import '../../assets/styles/variables.scss';
 
 header {
-  min-height: 787px;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 9;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: $bgDarkGradient;
+  box-shadow: 0px 0px 152px rgba(0, 196, 240, 0.42);
 }
 
 .header__nav {
-  margin-top: 80px;
+  height: 40px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__menu {
-  width: 710px;
+  width: 70%;
   display: flex;
   justify-content: space-between;
 }
 
 .header__navLink {
   font-size: 18px;
+  line-height: 150%;
+  position: relative;
 
-  &:hover {
+  &::before {
+    content: attr(data-text);
+    position: absolute;
     color: orange;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    border-bottom: 1px solid orange;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+
+  &:hover::before{
+    height: 90%;
+    filter: drop-shadow(0 0 25px orange);
+    -webkit-filter: drop-shadow(0 0 25px orange);
   }
 
   &-active {
-    border-bottom: 1px solid orange;
+    &::before{
+      height: 90%;
+      filter: drop-shadow(0 0 25px orange);
+      -webkit-filter: drop-shadow(0 0 25px orange);
+    }
   }
-}
-
-.header__me {
-  height: 700px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header__aboutMe {
-  height: 377px;
-  max-width: 520px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: $textColor;
-}
-
-.header__greeting {
-  font-size: 48px;
-  font-family: $fontTitle;
-}
-
-.header__name {
-  font-size: 72px;
-  font-family: $fontTitle;
-}
-
-.header__aboutDesc {
-  font-size: 18px;
-  font-family: $fontDesc;
-}
-
-.header__btn {
-  width: 200px;
-  height: 47px;
-  background: $orangeGradient;
-  border: none;
-  border-radius: 6px;
-  box-shadow: 0px 2px 13px black;
-  font-size: 18px;
-  font-family: nextArt;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
-  }
-}
-
-.header__photo {
-  position: relative;
-}
-
-.header__smallCircle {
-  background: $bgLightGradient;
-  height: 90px;
-  width: 90px;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 48px;
-  font-family: $fontTitle;
-  color: $primaryColor;
-
-  &1 {
-    bottom: 40px;
-    left: 25px;
-  }
-
-  &2 {
-    bottom: 240px;
-    right: 530px;
-  }
-  
-  &3 {
-    top: 40px;
-    left: 25px;
-  }
-
-  &4 {
-    top: 40px;
-    right: 25px;
-  }
-}
-
-.header__photoCircle {
-  height: 575px;
-  width: 575px;
-  border: 67px solid $primaryColor;
-  border-radius: 50%;
-  box-shadow: 0px 0px 152px rgba(0, 196, 240, 0.42);
 }
