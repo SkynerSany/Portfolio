@@ -6,14 +6,25 @@
 
   margin-top: 140px;
   margin-bottom: 60px;
+  position: relative;
+
+  @media screen and (max-width: 1100px) {
+    height: auto;
+
+    margin-top: 70px;
+  }
 }
 
 .about__infoBg {
   height: inherit;
-  width: inherit;
-
+  width: 100%;
+  
   position: absolute;
   z-index: 0;
+
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
 }
 
 .about__bgCicle {
@@ -82,7 +93,7 @@
     width: 330px;
     height: 378px;
 
-    left: 150px;
+    right: 720px;
     top: 0;
   }
 
@@ -98,8 +109,12 @@
     width: 307px;
     height: 339px;
 
-    left: 170px;
+    right: 720px;
     top: 600px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    display: none;
   }
 }
 
@@ -126,6 +141,13 @@
   background: $bgDark;
   border-radius: 14px;
   color: $textColor;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    height: auto;
+
+    position: initial;
+  }
 }
 
 .about__title {
@@ -137,6 +159,10 @@
   font-family: $fontTitle;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media screen and (max-width: 1100px) {
+    top: -30px;
+  }
 }
 
 .about__text {

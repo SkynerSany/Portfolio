@@ -3,6 +3,8 @@
 #portfolio {
   height: 1000px;
 
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +13,21 @@
     height: 700px;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media screen and (max-width: 1000px) {
+    height: 860px;
+    margin-top: 80px;
+    
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: auto;
+
+    .container {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -27,6 +44,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 1000px) {
+    justify-content: center;
+  }
 }
 
 .portfolio__btn {
@@ -47,14 +68,6 @@
   box-shadow: 0px 2px 13px black;
   font-size: 30px;
   color: $textColor;
-
-  &btnRight {
-    
-  }
-
-  &btnLeft {
-    
-  }
   
   &:hover {
     box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
@@ -63,6 +76,23 @@
   &:active {
     background: $primaryColor;
     box-shadow: 0 0 25px $primaryColor;
+  }
+
+  @media screen and (max-width: 1000px) {
+    position: absolute;
+    bottom: 50px;
+
+    &Right {
+      right: 35%;
+    }
+
+    &Left {
+      right: 60%;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    display: none;
   }
 }
 
@@ -81,6 +111,10 @@
   -moz-border-radius: 29px;
   -ms-border-radius: 29px;
   -o-border-radius: 29px;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
 }
 
 .portfolio__sliderItem {
@@ -105,6 +139,10 @@
   -moz-border-radius: 29px;
   -ms-border-radius: 29px;
   -o-border-radius: 29px;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
 }
 
 .portfolio__projectInfo {
@@ -117,6 +155,10 @@
   justify-content: space-between;
 
   color: $textColor;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .portfolio__projectName {

@@ -24,6 +24,16 @@ header {
   width: 70%;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 555px) {
+    width: 100%;
+  }
+}
+
+.header__logo {
+  @media screen and (max-width: 555px) {
+    display: none;
+  }
 }
 
 .header__navLink {

@@ -5,5 +5,9 @@
   display: flex;
   justify-content: center;
   background: $bgLightGradient;
+
+  @media screen and (max-width: 1100px) {
+    min-height: auto;
+  }
 }
 

@@ -12,14 +12,16 @@ function Technology() {
 
 export default function TechnologyList() {
   return (
-    <div className="about__technologyList">
-      <Technology />
-      <Technology />
-      <Technology />
-      <Technology />
-      <Technology />
-      <Technology />
-      <Technology />
+    <div className="about__technologyContainer">
+      <div className="about__technologyList">
+        <Technology />
+        <Technology />
+        <Technology />
+        <Technology />
+        <Technology />
+        <Technology />
+        <Technology />
+      </div>
     </div>
   )
 }

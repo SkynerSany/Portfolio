@@ -2,25 +2,45 @@
 
 #greeting {
   height: 700px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: default;
 
   .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
+
+  @media screen and (max-width: 1100px) {
+    height: 450px;
+  }
+
+  @media screen and (max-width: 555px) {
+    height: 500px;
+  }
 }
 
 .greeting__aboutMe {
   min-height: 377px;
   max-width: 520px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   color: $textColor;
+
+  @media screen and (max-width: 1100px) {
+    max-width: 100%;
+
+    align-items: center;
+  }
+
+  @media screen and (max-width: 555px) {
+    height: 450px;
+  }
 }
 
 .greeting__greeting {
@@ -43,10 +63,12 @@
 .greeting__btn {
   width: 200px;
   height: 47px;
+
   background: $orangeGradient;
   border: none;
   border-radius: 6px;
   box-shadow: 0px 2px 13px black;
+
   font-size: 18px;
   font-family: nextArt;
   cursor: pointer;
@@ -63,17 +85,25 @@
 
 .greeting__photo {
   position: relative;
+
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
 }
 
 .greeting__smallCircle {
-  background: $bgLightGradient;
   height: 90px;
   width: 90px;
+
   position: absolute;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: $bgLightGradient;
   border-radius: 50%;
+
   font-size: 48px;
   font-family: $fontTitle;
   color: $primaryColor;
@@ -102,6 +132,7 @@
 .greeting__photoCircle {
   height: 575px;
   width: 575px;
+  
   border: 67px solid $primaryColor;
   border-radius: 50%;
   box-shadow: 0px 0px 152px rgba(0, 196, 240, 0.42);
