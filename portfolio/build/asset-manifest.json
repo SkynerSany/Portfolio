@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.48c545ac.css",
-    "main.js": "./static/js/main.23b49289.js",
+    "main.css": "./static/css/main.3067f9a6.css",
+    "main.js": "./static/js/main.95f507f0.js",
     "static/media/repair.png": "./static/media/repair.84e4b3558a1ce0da10b7.png",
     "static/media/NextArt_SemiBold.otf": "./static/media/NextArt_SemiBold.f9b65efa8af2d41dd76d.otf",
     "static/media/NextArt_Regular.otf": "./static/media/NextArt_Regular.03e3e91531fe3999b7e5.otf",
@@ -15,11 +15,11 @@
     "static/media/telegram.svg": "./static/media/telegram.a9cee6ca64a4ae69e18c.svg",
     "index.html": "./index.html",
     "static/media/linkedin.svg": "./static/media/linkedin.7c431e79856f464e7c9d.svg",
-    "main.48c545ac.css.map": "./static/css/main.48c545ac.css.map",
-    "main.23b49289.js.map": "./static/js/main.23b49289.js.map"
+    "main.3067f9a6.css.map": "./static/css/main.3067f9a6.css.map",
+    "main.95f507f0.js.map": "./static/js/main.95f507f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.48c545ac.css",
-    "static/js/main.23b49289.js"
+    "static/css/main.3067f9a6.css",
+    "static/js/main.95f507f0.js"
   ]
 }
