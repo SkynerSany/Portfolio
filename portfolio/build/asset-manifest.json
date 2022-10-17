@@ -1,25 +1,24 @@
 {
   "files": {
-    "main.css": "./static/css/main.8a733b4f.css",
-    "main.js": "./static/js/main.839c7de9.js",
+    "main.css": "./static/css/main.b3263174.css",
+    "main.js": "./static/js/main.0387b41d.js",
     "static/media/repair.png": "./static/media/repair.84e4b3558a1ce0da10b7.png",
     "static/media/NextArt_SemiBold.otf": "./static/media/NextArt_SemiBold.f9b65efa8af2d41dd76d.otf",
     "static/media/NextArt_Regular.otf": "./static/media/NextArt_Regular.03e3e91531fe3999b7e5.otf",
     "static/media/NextArt_Bold.otf": "./static/media/NextArt_Bold.b2bf4013b59db90ec254.otf",
     "static/media/ArodoraPro-Light.otf": "./static/media/ArodoraPro-Light.93750f5f4f0e4ed890b1.otf",
     "static/media/codewars.svg": "./static/media/codewars.f55c6e82e8d130a44131.svg",
-    "static/media/iconSass.svg": "./static/media/iconSass.f9e4908b65c0b955ab75.svg",
     "static/media/skype.svg": "./static/media/skype.2340b9c25e5efb066e9f.svg",
     "static/media/discord.svg": "./static/media/discord.4fd9f1558bec83956755.svg",
     "static/media/github.svg": "./static/media/github.41705af4316a166e555d.svg",
     "static/media/telegram.svg": "./static/media/telegram.a9cee6ca64a4ae69e18c.svg",
     "index.html": "./index.html",
     "static/media/linkedin.svg": "./static/media/linkedin.7c431e79856f464e7c9d.svg",
-    "main.8a733b4f.css.map": "./static/css/main.8a733b4f.css.map",
-    "main.839c7de9.js.map": "./static/js/main.839c7de9.js.map"
+    "main.b3263174.css.map": "./static/css/main.b3263174.css.map",
+    "main.0387b41d.js.map": "./static/js/main.0387b41d.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a733b4f.css",
-    "static/js/main.839c7de9.js"
+    "static/css/main.b3263174.css",
+    "static/js/main.0387b41d.js"
   ]
 }
