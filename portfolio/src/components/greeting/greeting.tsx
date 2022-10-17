@@ -1,7 +1,17 @@
 import React from 'react';
 import './greeting.scss';
 
+function Technology({name, i}: {name: string; i: number}) {
+  return (
+    <div className={`greeting__smallCircle greeting__smallCircle${i + 1}`} key={i}>
+      <div style={{backgroundImage: `url(./icons/technology/${ name }.svg)`}}></div>
+    </div>
+  );
+}
+
 export default function Greeting() {
+  const TECHNOLOGY_NAMES: string[] = ['webpack', 'sass', 'react', 'redux'];
+
   return (
     <div id="greeting">
       <div className="container">
@@ -13,10 +23,9 @@ export default function Greeting() {
         </div>
         <div className="greeting__photo">
           <div className="greeting__photoCircle"></div>
-          <div className="greeting__smallCircle greeting__smallCircle1">ps</div>
-          <div className="greeting__smallCircle greeting__smallCircle2">PS</div>
-          <div className="greeting__smallCircle greeting__smallCircle3">PS</div>
-          <div className="greeting__smallCircle greeting__smallCircle4">PS</div>
+          {
+            TECHNOLOGY_NAMES.map((item, i) => <Technology name={item} i={i} />)  
+          }
         </div>
       </div>
     </div>

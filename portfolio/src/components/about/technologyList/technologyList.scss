@@ -75,12 +75,12 @@
 .about__technologyImg {
   height: 120px;
   width: 120px;
-  
-  background-image: url(../../../assets/icons/iconSass.svg);
+
   background-size: cover;
 }
 
 .about__technologyTitle {
   font-size: 36px;
   color: $textColor;
+  text-transform: uppercase;
 }

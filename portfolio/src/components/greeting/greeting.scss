@@ -123,11 +123,9 @@
   background: $bgLightGradient;
   border-radius: 50%;
 
-  font-size: 48px;
-  font-family: $fontTitle;
-  color: $primaryColor;
-
   &1 {
+    padding-right: 3px;
+    
     bottom: 40px;
     left: 25px;
   }
@@ -143,8 +141,16 @@
   }
 
   &4 {
+    padding-bottom: 8px;
+
     top: 40px;
     right: 25px;
+  }
+
+  div {
+    height: 70px;
+    width: 70px;
+    background-size: cover;
   }
 }
 
