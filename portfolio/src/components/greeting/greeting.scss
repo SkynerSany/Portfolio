@@ -18,7 +18,7 @@
   }
 
   @media screen and (max-width: 555px) {
-    height: 500px;
+    height: 90vw;
   }
 }
 
@@ -39,7 +39,7 @@
   }
 
   @media screen and (max-width: 555px) {
-    height: 450px;
+    min-height: 81vw;
   }
 }
 
@@ -47,17 +47,29 @@
   font-size: 48px;
   font-weight: 600;
   font-family: $fontTitle;
+
+  @media screen and (max-width: 555px) {
+    font-size: 9vw;
+  }
 }
 
 .greeting__name {
   font-size: 72px;
   font-weight: 700;
   font-family: $fontTitle;
+
+  @media screen and (max-width: 555px) {
+    font-size: 13vw;
+  }
 }
 
 .greeting__aboutDesc {
   font-size: 18px;
   font-family: $fontDesc;
+  
+  @media screen and (max-width: 555px) {
+    font-size: 3.3vw;
+  }
 }
 
 .greeting__btn {
@@ -80,6 +92,13 @@
   &:active {
     background: $primaryColor;
     box-shadow: 0 0 25px $primaryColor;
+  }
+
+  @media screen and (max-width: 555px) {
+    width: 36vw;
+    height: 8.5vw;
+
+    font-size: 3.3vw;
   }
 }
 

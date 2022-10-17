@@ -24,9 +24,19 @@
 
   @media screen and (max-width: 640px) {
     height: auto;
+    margin-top: 40px;
 
     .container {
+      height: 110vw;
       margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 555px) {
+    margin-top: 40px;
+
+    .container {
+      margin: 0 0 40px;
     }
   }
 }
@@ -36,6 +46,10 @@
   text-transform: uppercase;
   font-family: $fontTitle;
   color: $textColor;
+
+  @media screen and (max-width: 555px) {
+    font-size: 9vw;
+  }
 }
 
 .portfolio__sliderBox {
@@ -96,6 +110,52 @@
   }
 }
 
+.portfolio__btnMobile {
+  position: absolute;
+
+  display: none;
+
+  border: none;
+  background: none;
+  color: rgba($color: orange, $alpha: 0.3);
+  font-size: 22vw;
+
+  &:hover {
+    text-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+    color: rgba($color: orange, $alpha: 1);
+  }
+
+  &:active {
+    text-shadow: 0px 2px 13px $primaryColor;
+    color: rgba($color: $primaryColor, $alpha: 1);
+  }
+
+  @media screen and (max-width: 640px) {
+    bottom: 35%;
+
+    display: flex;
+
+    &Right {
+      right: 8%;
+    }
+
+    &Left {
+      left: 8%;
+    }
+  }
+
+  @media screen and (max-width: 555px) {
+
+    &Right {
+      right: 3%;
+    }
+
+    &Left {
+      left: 3%;
+    }
+  }
+}
+
 .portfolio__slider {
   width: 80%;
   height: 600px;
@@ -115,6 +175,18 @@
   @media screen and (max-width: 1000px) {
     width: 100%;
   }
+  
+  @media screen and (max-width: 640px) {
+    height: 95vw;
+  }
+
+  @media screen and (max-width: 555px) {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
 }
 
 .portfolio__sliderItem {
@@ -124,6 +196,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 555px) {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .portfolio__projectImage {
@@ -142,6 +219,20 @@
 
   @media screen and (max-width: 1000px) {
     width: 100%;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: 80vw;
+  }
+
+  @media screen and (max-width: 555px) {
+    height: 100%;
+    
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
   }
 }
 

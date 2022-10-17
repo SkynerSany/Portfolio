@@ -8,6 +8,7 @@ export default function Portfolio() {
         <h2 className="portfolio__title">Portfolio</h2>
         <div className="portfolio__sliderBox">
           <button className="portfolio__btn portfolio__btnLeft">🡠</button>
+          <button className="portfolio__btnMobile portfolio__btnMobileLeft">❮</button>
           <div className="portfolio__slider">
             <div className="portfolio__sliderItem">
               <div className="portfolio__projectImage"></div>
@@ -19,6 +20,7 @@ export default function Portfolio() {
             </div>
           </div>
           <button className="portfolio__btn portfolio__btnRight" data-text='🡢'>🡢</button>
+          <button className="portfolio__btnMobile portfolio__btnMobileRight">❯</button>
         </div>
       </div>
     </section>
