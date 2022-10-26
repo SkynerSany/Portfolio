@@ -1,0 +1,80 @@
+@import '../../../assets/styles/variables.scss';
+
+.portfolio__sliderItem {
+  height: 88%;
+  width: 88%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 555px) {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.portfolio__projectImage {
+  width: 500px;
+  height: 500px;
+
+  background-image: url(../../../assets/images/repair.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  border-radius: 29px;
+  -webkit-border-radius: 29px;
+  -moz-border-radius: 29px;
+  -ms-border-radius: 29px;
+  -o-border-radius: 29px;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: 80vw;
+  }
+
+  @media screen and (max-width: 555px) {
+    height: 100%;
+    
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+}
+
+.portfolio__projectInfo {
+  width: 300px;
+  height: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  color: $textColor;
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.portfolio__projectName {
+  font-size: 24px;
+}
+
+.portfolio__projectDesc {
+  font-size: 18px;
+  text-align: center;
+}
+
+.portfolio__btnMore {
+  background: none;
+  border: none;
+  color: orange;
+  font-size: 18px;
+}

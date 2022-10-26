@@ -24,7 +24,7 @@ export default function Greeting() {
         <div className="greeting__photo">
           <div className="greeting__photoCircle"></div>
           {
-            TECHNOLOGY_NAMES.map((item, i) => <Technology name={item} i={i} />)  
+            TECHNOLOGY_NAMES.map((item, i) => <Technology name={item} i={i} key={item}/>)  
           }
         </div>
       </div>
