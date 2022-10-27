@@ -8,12 +8,12 @@ interface projectsType {
   pageCount: string,
 }
 
-const projects: projectsType[] = [
+export const projects: projectsType[] = [
   {
     id: 1,
     name: 'Movies collection',
     poster: '../../assets/images/movies-collection.png',
-    link: '../../projects/movies-collection/index.html',
+    link: '../../projects/movies-collection/build/index.html',
     technology: [
       'react',
       'sass'
@@ -126,5 +126,3 @@ const projects: projectsType[] = [
     pageCount: 'single page'
   },
 ];
-
-export {projects}
