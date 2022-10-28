@@ -44,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "./"
+  "homepage": "./",
+  "devDependencies": {
+    "@types/uniqid": "^5.3.2"
+  }
 }

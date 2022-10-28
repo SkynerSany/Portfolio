@@ -1,6 +1,9 @@
 import React from 'react'
-import { technologyProps} from './interfaces';
 import './technologyList.scss';
+
+interface technologyProps {
+  name: string,
+}
 
 function Technology({ name }: technologyProps) {
   return (
@@ -15,12 +18,12 @@ export default function TechnologyList() {
   const TECHNOLOGY_NAMES: string[] = ['typescript', 'react', 'redux', 'javascript', 'sass', 'webpack', 'git'];
 
   return (
-    <div className="about__technologyContainer">
+    <section className="about__technologyContainer">
       <div className="about__technologyList">
         {
           TECHNOLOGY_NAMES.map(item => <Technology name={ item } key={item} />)
         }
       </div>
-    </div>
+    </section>
   )
 }

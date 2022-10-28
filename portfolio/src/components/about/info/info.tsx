@@ -3,7 +3,7 @@ import './info.scss';
 
 export default function Info() {
   return (
-    <div className='about__info'>
+    <section className='about__info'>
       <div className="about__infoBg">
         <div className="about__bgCicle about__bgCicle1"></div>
         <div className="about__bgCicle about__bgCicle2"></div>
@@ -26,6 +26,6 @@ export default function Info() {
             If you are interested in me , you want to know something more or use my services, then I will provide all my contacts below.</p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

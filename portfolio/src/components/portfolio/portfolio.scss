@@ -156,8 +156,8 @@
   }
 }
 
-.portfolio__slider {
-  width: 80%;
+.slider {
+  width: 1000px;
   height: 600px;
 
   display: flex;
@@ -186,5 +186,22 @@
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
+  }
+}
+
+.slider__viewport {
+  width: 800px;
+  height: 500px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 }

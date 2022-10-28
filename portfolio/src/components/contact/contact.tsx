@@ -3,8 +3,8 @@ import './contact.scss';
 
 export default function Contact() {
   return (
-    <section id="contact">
-      <div className="container">
+    <article id="contact">
+      <section className="container">
         <h2 className="contact__title">Contact Me</h2>
         <form action="" className="contact__form">
           <div className="contact__name">
@@ -31,7 +31,7 @@ export default function Contact() {
           </div>
           <button className="contact__button">SEND</button>
         </form>
-      </div>
-    </section>
+      </section>
+    </article>
   )
 }

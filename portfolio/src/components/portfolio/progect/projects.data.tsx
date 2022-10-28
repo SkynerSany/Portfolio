@@ -10,7 +10,7 @@ interface projectsType {
 
 export const projects: projectsType[] = [
   {
-    id: 1,
+    id: 0,
     name: 'Movies collection',
     poster: '../../assets/images/movies-collection.png',
     link: '../../projects/movies-collection/build/index.html',
@@ -22,7 +22,7 @@ export const projects: projectsType[] = [
     pageCount: 'Single page'
   },
   {
-    id: 2,
+    id: 1,
     name: 'Gem puzzle',
     poster: '../../assets/images/gem-puzzle.png',
     link: '../../projects/gem-puzzle/index.html',
@@ -34,7 +34,7 @@ export const projects: projectsType[] = [
     pageCount: 'single page'
   },
   {
-    id: 3,
+    id: 2,
     name: 'To Do List',
     poster: '../../assets/images/todo-list.png',
     link: '../../projects/todo-list/index.html',
@@ -46,7 +46,7 @@ export const projects: projectsType[] = [
     pageCount: 'single page'
   },
   {
-    id: 4,
+    id: 3,
     name: 'Online zoo',
     poster: '../../assets/images/online-zoo.png',
     link: '../../projects/online-zoo/pajes/main/index.html',
@@ -58,7 +58,7 @@ export const projects: projectsType[] = [
     pageCount: '2'
   },
   {
-    id: 5,
+    id: 4,
     name: 'Weather',
     poster: '../../assets/images/weather.png',
     link: '../../projects/weather/index.html',
@@ -70,7 +70,7 @@ export const projects: projectsType[] = [
     pageCount: 'single page'
   },
   {
-    id: 6,
+    id: 5,
     name: 'Momentum',
     poster: '../../assets/images/momentum.png',
     link: '../../projects/momentum/index.html',
@@ -82,7 +82,7 @@ export const projects: projectsType[] = [
     pageCount: 'single page'
   },
   {
-    id: 7,
+    id: 6,
     name: 'Repair design',
     poster: '../../assets/images/repair-design.png',
     link: '../../projects/repair-design/index.html',
@@ -93,7 +93,7 @@ export const projects: projectsType[] = [
     pageCount: 'single page'
   },
   {
-    id: 8,
+    id: 7,
     name: 'Shelter',
     poster: '../../assets/images/shelter.png',
     link: '../../projects/shelter/index.html',
@@ -104,7 +104,7 @@ export const projects: projectsType[] = [
     pageCount: '2'
   },
   {
-    id: 9,
+    id: 8,
     name: 'Interno',
     poster: '../../assets/images/interno.png',
     link: '../../projects/interno/index.html',
@@ -115,7 +115,7 @@ export const projects: projectsType[] = [
     pageCount: 'single page'
   },
   {
-    id: 10,
+    id: 9,
     name: 'Webdev',
     poster: '../../assets/images/webdev.png',
     link: '../../projects/webdev/index.html',

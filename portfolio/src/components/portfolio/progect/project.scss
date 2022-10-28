@@ -1,8 +1,8 @@
 @import '../../../assets/styles/variables.scss';
 
-.portfolio__sliderItem {
-  height: 88%;
-  width: 88%;
+.slider__item {
+  width: 800px;
+  height: 500px;
 
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@
   }
 }
 
-.portfolio__projectImage {
+.slider__project-image {
   width: 500px;
   height: 500px;
 
@@ -47,7 +47,7 @@
   }
 }
 
-.portfolio__projectInfo {
+.slider__project-info {
   width: 300px;
   height: inherit;
 
@@ -63,16 +63,16 @@
   }
 }
 
-.portfolio__projectName {
+.slider__project-name {
   font-size: 24px;
 }
 
-.portfolio__projectDesc {
+.slider__project-desc {
   font-size: 18px;
   text-align: center;
 }
 
-.portfolio__btnMore {
+.slider__btn-open {
   background: none;
   border: none;
   color: orange;

@@ -5,11 +5,11 @@ import TechnologyList from './technologyList/technologyList';
 
 export default function About() {
   return (
-    <section id='about'>
+    <article id='about'>
       <div className="container">
         <TechnologyList />
         <Info />
       </div>
-    </section>
+    </article>
   )
 }
