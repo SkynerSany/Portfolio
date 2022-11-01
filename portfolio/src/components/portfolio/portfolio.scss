@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 70px;
 
   .container {
     height: 700px;
@@ -34,6 +35,7 @@
 
   @media screen and (max-width: 555px) {
     margin-top: 40px;
+    scroll-margin-top: 12.61vw;
 
     .container {
       margin: 0 0 40px;

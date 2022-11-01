@@ -49,7 +49,7 @@ export default function Project({ projectId }: {projectId: number}) {
             project.adaptive && <p className="slider__adaptive">Adaptive</p>
           }
         </div>
-        <a href={ project.link } className="slider__btn-open" target='_blank'>Open project 🡢</a>
+        <a href={ project.link } className="slider__btn-open" target='_blank' rel="noreferrer">Open project 🡢</a>
       </div>
     </div>
   )

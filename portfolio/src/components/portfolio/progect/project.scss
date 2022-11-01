@@ -61,6 +61,9 @@
 
 .slider__project-desc {
   height: 100%;
+  
+  margin-left: 30px;
+  align-self: flex-start;
   font-size: 18px;
 
   & > * {

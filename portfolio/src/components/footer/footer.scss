@@ -8,6 +8,10 @@
   justify-content: center;
   background: $bgDarkGradient;
 
+  @media screen and (max-width: 400px) {
+    height: 25vw;
+  }
+
   .container {
     align-items: center;
   }
@@ -62,5 +66,10 @@
 
   &Codewars {
     background-image: url(../../assets/icons/social/codewars.svg);
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 12.50vw;
+    width: 12.50vw;
   }
 }

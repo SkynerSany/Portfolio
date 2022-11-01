@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-margin-top: 70px;
+  overflow: hidden;
 
   .container {
     flex-direction: row;
@@ -19,6 +21,7 @@
 
   @media screen and (max-width: 555px) {
     height: 90vw;
+    scroll-margin-top: 12.61vw;
   }
 }
 
@@ -72,18 +75,28 @@
   }
 }
 
-.greeting__btn {
+.greeting__btnsContainer {
+  display: flex; 
+}
+
+.greeting__btnContact,
+.greeting__btnCv {
   width: 200px;
   height: 47px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   background: $orangeGradient;
   border: none;
   border-radius: 6px;
   box-shadow: 0px 2px 13px black;
+  user-select: none;
+  cursor: pointer;
 
   font-size: 18px;
   font-family: nextArt;
-  cursor: pointer;
 
   &:hover {
     box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
@@ -99,6 +112,15 @@
     height: 8.5vw;
 
     font-size: 3.3vw;
+  }
+}
+
+.greeting__btnCv {
+  width: 60px;
+  margin-left: 20px;
+
+  @media screen and (max-width: 555px) {
+    width: 9.5vw;
   }
 }
 
@@ -126,18 +148,18 @@
   &1 {
     padding-right: 3px;
     
-    bottom: 40px;
-    left: 25px;
+    bottom: 95px;
+    left: 0px;
   }
 
   &2 {
-    bottom: 240px;
+    bottom: 285px;
     right: 530px;
   }
   
   &3 {
-    top: 40px;
-    left: 25px;
+    top: 0px;
+    left: 80px;
   }
 
   &4 {
@@ -161,4 +183,22 @@
   border: 67px solid $primaryColor;
   border-radius: 50%;
   box-shadow: 0px 0px 152px rgba(0, 196, 240, 0.42);
+
+  background-size: 930px;
+
+  background-repeat: no-repeat;
+  background-position: -270px 0;
+}
+
+.greeting__photo-container {
+  height: 576px;
+  width: 700px;
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  background-size: 1300px;
+
+  background-image: url(../../assets/images/1.png);
+  background-repeat: no-repeat;
+  background-position: -332px 10px;
 }

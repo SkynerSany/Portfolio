@@ -6,10 +6,15 @@
   font-family: arodoba;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(101.56deg, #2C2C2C 1.56%, #1C1C1C 95.55%);
   scroll-behavior: smooth;
   cursor: default;
+  position: relative;
 }
 
 a {
