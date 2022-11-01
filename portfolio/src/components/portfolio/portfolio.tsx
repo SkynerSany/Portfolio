@@ -1,12 +1,12 @@
 import './portfolio.scss';
 import { projects } from './progect/projects.data';
 import uniqid from 'uniqid';
-import Project from './progect/Project';
+import Project from './progect/project';
 import { useRef, useState } from 'react';
 
 export default function Portfolio() {
-  const viewport = useRef() as React.MutableRefObject<HTMLInputElement>;
-  const sliderBox = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const viewport = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const sliderBox = useRef() as React.MutableRefObject<HTMLDivElement>;
   const [curentProject, setCurentProject] = useState(0);
 
   const setDisabledBtn = (time: number) => {
@@ -22,7 +22,7 @@ export default function Portfolio() {
   const scrollRight = (): void => {
     const itemWidth: number = parseFloat(getComputedStyle(viewport.current).width);
 
-    if (Math.floor((curentProject + 1) * itemWidth) === Math.floor(viewport.current.scrollWidth)) {
+    if (Math.floor((curentProject + 1) * itemWidth) >= Math.floor(viewport.current.scrollWidth) - 1) {
       viewport.current.scrollTo(0, 0)
       setCurentProject(0);
       setDisabledBtn(700);

@@ -3,6 +3,7 @@ interface projectsType {
   name: string,
   poster: string,
   link: string,
+  github: string,
   technology: string[],
   adaptive: boolean,
   pageCount: string,
@@ -15,6 +16,7 @@ export const projects: projectsType[] = [
     name: 'Movies collection',
     poster: './images/movies-collection.png',
     link: './projects/movies-collection/build/index.html',
+    github: 'https://github.com/SkynerSany/MoviesCollection/tree/MoviesCollection',
     technology: [
       'react',
       'sass'
@@ -27,6 +29,7 @@ export const projects: projectsType[] = [
     name: 'Gem puzzle',
     poster: './images/gem-puzzle.png',
     link: './projects/gem-puzzle/index.html',
+    github: 'https://github.com/SkynerSany/gem-puzzle/tree/gem-puzzle',
     technology: [
       'javascript',
       'sass'
@@ -39,6 +42,7 @@ export const projects: projectsType[] = [
     name: 'To Do List',
     poster: './images/todo-list.png',
     link: './projects/todo-list/index.html',
+    github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/To-do%20list',
     technology: [
       'javascript',
       'sass'
@@ -51,6 +55,7 @@ export const projects: projectsType[] = [
     name: 'Online zoo',
     poster: './images/online-zoo.png',
     link: './projects/online-zoo/pages/main/index.html',
+    github: 'https://github.com/SkynerSany/Online-zoo/tree/online-zoo',
     technology: [
       'javascript',
       'sass'
@@ -67,6 +72,7 @@ export const projects: projectsType[] = [
     name: 'Weather',
     poster: './images/weather.png',
     link: './projects/weather/index.html',
+    github: 'https://github.com/SkynerSany/weather/tree/weather',
     technology: [
       'javascript',
       'sass'
@@ -79,6 +85,7 @@ export const projects: projectsType[] = [
     name: 'Momentum',
     poster: './images/momentum.png',
     link: './projects/momentum/index.html',
+    github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/momentum',
     technology: [
       'javascript',
       'sass'
@@ -91,6 +98,7 @@ export const projects: projectsType[] = [
     name: 'Repair design',
     poster: './images/repair.png',
     link: './projects/repair-design/index.html',
+    github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/repair-design-project',
     technology: [
       'sass'
     ],
@@ -102,6 +110,7 @@ export const projects: projectsType[] = [
     name: 'Shelter',
     poster: './images/shelter.png',
     link: './projects/shelter/pages/main/main.html',
+    github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/shelter',
     technology: [
       'sass'
     ],
@@ -117,6 +126,7 @@ export const projects: projectsType[] = [
     name: 'Interno',
     poster: './images/interno.png',
     link: './projects/interno/index.html',
+    github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/Interno',
     technology: [
       'css'
     ],

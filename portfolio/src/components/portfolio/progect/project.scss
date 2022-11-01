@@ -11,6 +11,7 @@
   @media screen and (max-width: 1100px) {
     height: 100%;
     width: 97vw;
+    position: relative;
   }
 }
 
@@ -28,8 +29,10 @@
   -o-border-radius: 29px;
 
   @media screen and (max-width: 1100px) {
-    width: 100%;
-    height: 100%;
+    width: 600px;
+    height: 600px;
+
+    margin: 0 auto;
     
     border-radius: 0;
     -webkit-border-radius: 0;
@@ -51,12 +54,35 @@
   color: $textColor;
 
   @media screen and (max-width: 1100px) {
+    width: 600px;
+    height: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
     display: none;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 97vw;
+    height: 95vw;
+    padding: 6.25vw;
   }
 }
 
 .slider__project-name {
   font-size: 24px;
+
+  @media screen and (max-width: 640px) {
+    font-size: 5vw;
+  }
 }
 
 .slider__project-desc {
@@ -70,6 +96,22 @@
     height: 80px;
     margin: 20px 0;
   }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 2.81vw;
+  
+    & > * {
+      height: 12.50vw;
+      margin: 2.5vw 0;
+    }
+  }
 }
 
 .slider__technology-list {
@@ -80,6 +122,11 @@
 .slider__technology {
   height: 60px;
   margin: 10px;
+
+  @media screen and (max-width: 640px) {
+    height: 9.38vw;
+    margin: 1.56vw;
+  }
 }
 
 .slider__pages {
@@ -92,11 +139,33 @@
 
 .slider__project-page {
   margin: 10px 0;
+
+  @media screen and (max-width: 640px) {
+    margin: 1.56vw 0;
+  }
 }
 
 .slider__page-count {
   display: flex;
   align-items: center;
+}
+
+.slider__github-link {
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  color: orange;
+
+  &:hover {
+    text-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+  }
+
+  &:active {
+    color: $primaryColor;
+    text-shadow: 0 0 25px $primaryColor;
+  }
 }
 
 .slider__adaptive {
@@ -109,4 +178,8 @@
   border: none;
   color: orange;
   font-size: 18px;
+  
+  @media screen and (max-width: 640px) {
+    font-size: 4vw;
+  }
 }

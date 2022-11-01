@@ -19,9 +19,9 @@ export default function Greeting() {
         <section className="greeting__aboutMe">
           <p className="greeting__greeting">Hello</p>
           <p className="greeting__name">I'm Alexandr rylkov</p>
-          <p className="greeting__aboutDesc">I've been doing web design, 
-              front-end and back-end development for a year now. Do you need a website design, 
-              site layout, or maybe a turnkey website? Then contact me</p>
+          <p className="greeting__aboutDesc">I've been doing front-end development. 
+              Do you need a site layout, or maybe a fix a bugs in script? Then contact me
+          </p>
           <div className="greeting__btnsContainer">
             <a href="#contact" className="greeting__btnContact">Contact me</a>
             <a href="./documents/cv.pdf" className="greeting__btnCv" download="CV Rylkov.pdf">CV</a>

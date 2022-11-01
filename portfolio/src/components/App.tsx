@@ -1,11 +1,11 @@
 import React from "react";
 import About from "./about/about";
 import './app.scss';
-import Contact from "./contact/Contact";
-import Footer from "./footer/Footer";
-import Greeting from "./greeting/Greeting";
-import Header from './header/Header';
-import Portfolio from "./portfolio/Portfolio";
+import Contact from "./contact/contact";
+import Footer from "./footer/footer";
+import Greeting from "./greeting/greeting";
+import Header from './header/header';
+import Portfolio from "./portfolio/portfolio";
 
 function App() {
   return (
