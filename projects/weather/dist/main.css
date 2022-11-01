@@ -1,0 +1,272 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
+  \**************************************************************************************************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  text-shadow: 0 0 2px black; }
+
+.header {
+  height: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px #ffffff; }
+
+.header-cloud {
+  box-shadow: 12px 29px 81px 0px black; }
+
+.wrapper {
+  height: 50.45vw;
+  background-size: cover;
+  transition: 1s linear; }
+
+.control {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.cloud {
+  overflow: hidden;
+  position: relative; }
+
+.btn_top {
+  width: 4vw;
+  height: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid;
+  border-radius: 1vw;
+  text-align: center;
+  font-size: 1vw;
+  transition: width 0.3s linear;
+  cursor: pointer; }
+  .btn_top:hover {
+    box-shadow: inset 0 0 13px 0px white; }
+
+.constrol__animationCloudBtn {
+  width: 8vw; }
+
+.control__languages {
+  position: relative; }
+
+.table {
+  display: none;
+  width: 6.6vw;
+  justify-content: center;
+  animation-delay: 0.3s;
+  animation: animMenu 2s; }
+
+.row {
+  display: block;
+  width: 100%; }
+
+.control__search__form {
+  position: relative;
+  width: auto;
+  float: right;
+  margin-right: 30px; }
+
+.control__search__form__input {
+  position: relative;
+  width: 2.7vw;
+  height: 2.7vw;
+  padding-left: 1vw;
+  font-size: 1vw;
+  border-radius: 2vw;
+  border: 2px solid #ffffff;
+  background: none;
+  outline: none;
+  color: #ffffff;
+  transition: 0.3s linear; }
+  .control__search__form__input::-webkit-input-placeholder {
+    color: #ffffff; }
+
+.control__search__form__btn {
+  width: 2.7vw;
+  height: 2.7vw;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .control__search__form__btn:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 1.2vw;
+    color: #ffffff;
+    cursor: pointer; }
+  .control__search__form__btn:focus {
+    outline: none; }
+
+.clouds {
+  width: 100%;
+  height: 49vw;
+  left: 0;
+  top: 0;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none; }
+
+@keyframes animMenu {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes animCloud {
+  from {
+    -webkit-transform: translateX(100%); }
+  to {
+    -webkit-transform: translateX(-100%); } }
+
+@-moz-keyframes animCloud {
+  from {
+    -moz-transform: translateX(100%); }
+  to {
+    -moz-transform: translateX(-100%); } }
+
+@keyframes animCloud {
+  from {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%); }
+  to {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+
+.cloud1 {
+  -webkit-animation: animCloud 20s infinite linear;
+  -moz-animation: animCloud 20s infinite linear;
+  animation: animCloud 20s infinite linear; }
+
+.cloud2 {
+  -webkit-animation: animCloud 40s infinite linear;
+  -moz-animation: animCloud 40s infinite linear;
+  animation: animCloud 40s infinite linear; }
+
+.cloud3 {
+  -webkit-animation: animCloud 60s infinite linear;
+  -moz-animation: animCloud 60s infinite linear;
+  animation: animCloud 60s infinite linear; }
+
+.cloud4 {
+  -webkit-animation: animCloud 80s infinite linear;
+  -moz-animation: animCloud 80s infinite linear;
+  animation: animCloud 80s infinite linear; }
+
+.weather {
+  position: relative;
+  z-index: 1;
+  margin-top: 4vw;
+  display: flex;
+  justify-content: center; }
+
+.info__now {
+  position: relative;
+  height: 25vw;
+  width: 40vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-right: 2vw;
+  border-radius: 3vw;
+  box-shadow: 0 0 20px #ffffff;
+  color: #ffffff; }
+
+.info__days {
+  position: relative;
+  margin-top: 1vw;
+  height: 14vw;
+  width: 40vw;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-right: 2vw;
+  border-radius: 3vw;
+  box-shadow: 0 0 20px #ffffff; }
+
+.info__now__block {
+  display: flex;
+  justify-content: space-between; }
+
+.info__now__location {
+  float: left;
+  margin-top: 2vw;
+  margin-left: 2.5vw; }
+
+.info__now__location__name {
+  font-size: 340%; }
+
+.info__now__location__date {
+  margin-left: 0.9vw;
+  font-size: 140%; }
+
+.info__now__weather {
+  display: flex; }
+
+.info__now__weather__temperature {
+  font-size: 800%; }
+
+.info__now__weather__img {
+  height: 8vw;
+  margin-left: -1vw;
+  margin-top: -1.6vw; }
+
+.info__now__weather__about {
+  margin-top: 1vw;
+  font-size: 2vw;
+  display: flex;
+  flex-direction: column;
+  line-height: 3vw; }
+  .info__now__weather__about li {
+    margin: 0.2vw 2.5vw;
+    display: flex;
+    text-align: center;
+    justify-content: space-between; }
+
+.info__days__block {
+  margin-top: 1vw;
+  flex: 1;
+  text-align: center;
+  color: #ffffff; }
+
+.info__days__block__name {
+  font-size: 2vw; }
+
+.info__days__block__weather {
+  width: 13vw;
+  display: flex;
+  justify-content: center; }
+
+.info__days__block__weather__temperature {
+  font-size: 5vw;
+  margin-right: 4vw;
+  margin-top: 2vw;
+  margin-left: 2vw; }
+
+.info__days__block__weather__img {
+  height: 6vw;
+  margin-left: -5vw;
+  margin-top: -1vw; }
+
+.map {
+  position: relative;
+  height: 40vw;
+  width: 40vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3vw;
+  box-shadow: 0 0 20px #ffffff; }
+
