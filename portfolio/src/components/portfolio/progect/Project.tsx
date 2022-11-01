@@ -19,7 +19,7 @@ function TechnologyList({ technologies }: { technologies: string[] }) {
       {
         technologies.map(technology => (
           <img className='slider__technology'
-              src={`../../icons/technology/${ technology }.svg`}
+              src={`./icons/technology/${ technology }.svg`}
               alt={ technology }
               key={ uniqid() }
           />

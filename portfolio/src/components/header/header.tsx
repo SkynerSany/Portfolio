@@ -1,21 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import './header.scss';
-
-interface positionTypes {
-  'greeting': number;
-  'about': number;
-  'portfolio': number;
-  'contact': number;
-}
 
 export default function Header() {
   const nav = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const pos: positionTypes = {
-    'greeting': 0,
-    'about': 0,
-    'portfolio': 0,
-    'contact': 0,
-  }
 
   const changeLink = (target: HTMLLinkElement) => {
     nav.current.querySelector('.header__navLink-active')?.classList.toggle('header__navLink-active');
@@ -28,29 +15,6 @@ export default function Header() {
 
     changeLink(target);
   }
-
-  window.onscroll = () => {
-    const currentPos: number = Object.values(pos).indexOf(window.scrollY);
-    console.log(currentPos);
-    if (currentPos !== -1 ) {
-      const curSection = Object.keys(pos)[currentPos];
-      console.log(curSection);
-    }
-  }
-
-  useEffect(() => {
-    const greeting = document.querySelector('#greeting') as HTMLDivElement;
-    const about = document.querySelector('#about') as HTMLDivElement;
-    const portfolio = document.querySelector('#portfolio') as HTMLDivElement;
-    const contact = document.querySelector('#contact') as HTMLDivElement;
-
-    pos.greeting = greeting.offsetTop;
-    pos.about = about.offsetTop;
-    pos.portfolio = portfolio.offsetTop;
-    pos.contact = contact.offsetTop;
-
-    console.log(pos);
-  }, []);
 
   return (
     <header id="header">
