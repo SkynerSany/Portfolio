@@ -155,7 +155,8 @@
   top: 80px; 
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
 
   background: $bgDark;
   border-radius: 14px;
@@ -185,5 +186,6 @@
 }
 
 .about__text {
+  margin-bottom: 10px;
   font-size: 20px;
 }
