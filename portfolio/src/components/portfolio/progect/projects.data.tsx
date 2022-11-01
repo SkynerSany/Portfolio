@@ -13,8 +13,8 @@ export const projects: projectsType[] = [
   {
     id: 0,
     name: 'Movies collection',
-    poster: './portfolio/build/images/movies-collection.png',
-    link: './portfolio/build/projects/movies-collection/build/index.html',
+    poster: './images/movies-collection.png',
+    link: './projects/movies-collection/build/index.html',
     technology: [
       'react',
       'sass'
@@ -25,8 +25,8 @@ export const projects: projectsType[] = [
   {
     id: 1,
     name: 'Gem puzzle',
-    poster: './portfolio/build/images/gem-puzzle.png',
-    link: './portfolio/build/projects/gem-puzzle/index.html',
+    poster: './images/gem-puzzle.png',
+    link: './projects/gem-puzzle/index.html',
     technology: [
       'javascript',
       'sass'
@@ -37,8 +37,8 @@ export const projects: projectsType[] = [
   {
     id: 2,
     name: 'To Do List',
-    poster: './portfolio/build/images/todo-list.png',
-    link: './portfolio/build/projects/todo-list/index.html',
+    poster: './images/todo-list.png',
+    link: './projects/todo-list/index.html',
     technology: [
       'javascript',
       'sass'
@@ -49,8 +49,8 @@ export const projects: projectsType[] = [
   {
     id: 3,
     name: 'Online zoo',
-    poster: './portfolio/build/images/online-zoo.png',
-    link: './portfolio/build/projects/online-zoo/pages/main/index.html',
+    poster: './images/online-zoo.png',
+    link: './projects/online-zoo/pages/main/index.html',
     technology: [
       'javascript',
       'sass'
@@ -65,8 +65,8 @@ export const projects: projectsType[] = [
   {
     id: 4,
     name: 'Weather',
-    poster: './portfolio/build/images/weather.png',
-    link: './portfolio/build/projects/weather/index.html',
+    poster: './images/weather.png',
+    link: './projects/weather/index.html',
     technology: [
       'javascript',
       'sass'
@@ -77,8 +77,8 @@ export const projects: projectsType[] = [
   {
     id: 5,
     name: 'Momentum',
-    poster: './portfolio/build/images/momentum.png',
-    link: './portfolio/build/projects/momentum/index.html',
+    poster: './images/momentum.png',
+    link: './projects/momentum/index.html',
     technology: [
       'javascript',
       'sass'
@@ -89,8 +89,8 @@ export const projects: projectsType[] = [
   {
     id: 6,
     name: 'Repair design',
-    poster: './portfolio/build/images/repair.png',
-    link: './portfolio/build/projects/repair-design/index.html',
+    poster: './images/repair.png',
+    link: './projects/repair-design/index.html',
     technology: [
       'sass'
     ],
@@ -100,8 +100,8 @@ export const projects: projectsType[] = [
   {
     id: 7,
     name: 'Shelter',
-    poster: './portfolio/build/images/shelter.png',
-    link: './portfolio/build/projects/shelter/pages/main/main.html',
+    poster: './images/shelter.png',
+    link: './projects/shelter/pages/main/main.html',
     technology: [
       'sass'
     ],
@@ -115,8 +115,8 @@ export const projects: projectsType[] = [
   {
     id: 8,
     name: 'Interno',
-    poster: './portfolio/build/images/interno.png',
-    link: './portfolio/build/projects/interno/index.html',
+    poster: './images/interno.png',
+    link: './projects/interno/index.html',
     technology: [
       'css'
     ],
