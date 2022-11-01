@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="#"><h1 class="header__title">To Do List</h1></a>
+        <div class="header__langBox">
+          <p class="header__selectedLang" tabindex="1">EN</p>
+          <ul class="header__langList">
+            <li class="header__lang" data-lang="en">EN</li>
+            <li class="header__lang" data-lang="ru">RU</li>
+          </ul>
+        </div>
+        <!-- <img src="src/assets/images/gear.svg" alt="gear" class="header__settingsBtn"> -->
+        <button class="header__createNewTaskBtn">Add new task</button>
+      </div>
+    </header>
+    <main class="main">
+      <aside class="createNewTask">
+        <form class="createNewTask__form">
+          <div class="createNewTask__textContainer">
+            <label for="title" class="createNewTask__itemDescription">Header:</label>
+            <input type="text" name="text" maxlength="28" id="title" class="createNewTask__title" required>
+            <label for="description" class="createNewTask__itemDescription">Description:</label>
+            <textarea name="description" maxlength="164"  id="description" cols="30" rows="10" class="createNewTask__description"></textarea>
+          </div>
+          <div class="createNewTask__dataContainer">
+            <label for="date" class="createNewTask__itemDescription">Date:</label>
+            <input type="date" name="date" id="date" min="2022-01-01" max="2099-12-31" class="createNewTask__date">
+            <label for="colorsBox" class="createNewTask__itemDescription">Importance:</label>
+            <div class="createNewTask__colorsBox" tabindex="4"></div>
+            <ul class="createNewTask__colors">
+              <li class="createNewTask__color createNewTask__color--red"></li>
+              <li class="createNewTask__color createNewTask__color--orange"></li>
+              <li class="createNewTask__color createNewTask__color--green"></li>
+            </ul>
+            <button class="createNewTask__submitBtn">Save</button>
+          </div>
+        </form>
+      </aside>
+      <section class="tasks"></section>
+    </main>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>

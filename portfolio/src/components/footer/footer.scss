@@ -1,0 +1,75 @@
+@import '../../assets/styles/variables.scss';
+
+#footer {
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bgDarkGradient;
+
+  @media screen and (max-width: 400px) {
+    height: 25vw;
+  }
+
+  .container {
+    align-items: center;
+  }
+}
+
+.footer__socialContainer {
+  width: 400px;
+
+  display: flex;
+  justify-content: space-between;
+
+  
+  @media screen and (max-width: 555px) {
+    width: 100%;
+  }
+}
+
+.footer__socialIcon {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  &:hover {
+    background-color: $primaryColor;
+    box-shadow: 0 0 25px $primaryColor;
+  }
+
+  &Telegram {
+    background-image: url(../../assets/icons/social/telegram.svg);
+  }
+
+  &Skype {
+    background-image: url(../../assets/icons/social/skype.svg);
+  }
+
+  &Discord {
+    background-image: url(../../assets/icons/social/discord.svg);
+  }
+
+  &Linkedin {
+    background-image: url(../../assets/icons/social/linkedin.svg);
+  }
+
+  &Github {
+    background-image: url(../../assets/icons/social/github.svg);
+  }
+
+  &Codewars {
+    background-image: url(../../assets/icons/social/codewars.svg);
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 12.50vw;
+    width: 12.50vw;
+  }
+}

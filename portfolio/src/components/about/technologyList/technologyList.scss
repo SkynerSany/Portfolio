@@ -1,0 +1,90 @@
+@import '../../../assets/styles/variables.scss';
+
+.about__technologyContainer {
+  @media screen and (max-width: 1000px) {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    scroll-behavior: smooth;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 630px) {
+    display: none;
+  }
+}
+
+.about__technologyList {
+  max-height: 600px;
+
+  margin-top: 70px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  overflow: hidden;
+
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 70px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 890px;
+
+    display: grid;
+    grid-template-columns: repeat(7, 270px);
+    grid-template-rows: 290px;
+    justify-content: flex-start;
+
+    overflow: scroll;
+    transition: transform .5s;
+    will-change: transform;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
+    
+    &::-webkit-scrollbar{
+      width: 0;
+      height: 0;
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    width: 600px;
+  }
+}
+
+.about__technology {
+  width: 270px;
+  height: 270px;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+
+  background: $bgDark;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+  border-radius: 29px;
+}
+
+.about__technologyImg {
+  height: 120px;
+  width: 120px;
+
+  background-size: cover;
+}
+
+.about__technologyTitle {
+  font-size: 36px;
+  color: $textColor;
+  text-transform: uppercase;
+}

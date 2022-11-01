@@ -1,0 +1,92 @@
+@import '../../assets/styles/variables.scss';
+
+header {
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bgDarkGradient;
+  box-shadow: 0px 0px 152px rgba(0, 196, 240, 0.42);
+
+  @media screen and (max-width: 555px) {
+    height: 12.61vw;
+  }
+
+  .container {
+    overflow: visible;
+  }
+}
+
+.header__nav {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 555px) {
+    height: 7.21vw;
+  }
+}
+
+.header__menu {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  height: 100px;
+  margin-top: 2px;
+  
+  @media screen and (max-width: 555px) {
+    height: 18.02vw;
+  }
+}
+
+.header__navLink {
+  font-size: 18px;
+  line-height: 150%;
+  position: relative;
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    color: orange;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    border-bottom: 1px solid orange;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+
+  &:hover::before{
+    height: 90%;
+    filter: drop-shadow(0 0 25px orange);
+    -webkit-filter: drop-shadow(0 0 25px orange);
+  }
+
+  &-active {
+    &::before{
+      height: 90%;
+      filter: drop-shadow(0 0 25px orange);
+      -webkit-filter: drop-shadow(0 0 25px orange);
+    }
+  }
+
+  @media screen and (max-width: 630px) {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 555px) {
+    font-size: 3.24vw;
+  }
+}
