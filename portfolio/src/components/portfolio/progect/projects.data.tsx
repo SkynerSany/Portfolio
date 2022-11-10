@@ -14,7 +14,7 @@ export const projects: projectsType[] = [
   {
     id: 0,
     name: 'Movies collection',
-    poster: './images/movies-collection.png',
+    poster: './images/movies-collection.avif',
     link: './projects/movies-collection/build/index.html',
     github: 'https://github.com/SkynerSany/MoviesCollection/tree/MoviesCollection',
     technology: [
@@ -27,7 +27,7 @@ export const projects: projectsType[] = [
   {
     id: 1,
     name: 'Gem puzzle',
-    poster: './images/gem-puzzle.png',
+    poster: './images/gem-puzzle.avif',
     link: './projects/gem-puzzle/index.html',
     github: 'https://github.com/SkynerSany/gem-puzzle/tree/gem-puzzle',
     technology: [
@@ -40,7 +40,7 @@ export const projects: projectsType[] = [
   {
     id: 2,
     name: 'To Do List',
-    poster: './images/todo-list.png',
+    poster: './images/todo-list.avif',
     link: './projects/todo-list/index.html',
     github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/To-do%20list',
     technology: [
@@ -53,7 +53,7 @@ export const projects: projectsType[] = [
   {
     id: 3,
     name: 'Online zoo',
-    poster: './images/online-zoo.png',
+    poster: './images/online-zoo.avif',
     link: './projects/online-zoo/pages/main/index.html',
     github: 'https://github.com/SkynerSany/Online-zoo/tree/online-zoo',
     technology: [
@@ -70,7 +70,7 @@ export const projects: projectsType[] = [
   {
     id: 4,
     name: 'Weather',
-    poster: './images/weather.png',
+    poster: './images/weather.avif',
     link: './projects/weather/index.html',
     github: 'https://github.com/SkynerSany/weather/tree/weather',
     technology: [
@@ -83,7 +83,7 @@ export const projects: projectsType[] = [
   {
     id: 5,
     name: 'Momentum',
-    poster: './images/momentum.png',
+    poster: './images/momentum.avif',
     link: './projects/momentum/index.html',
     github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/momentum',
     technology: [
@@ -96,7 +96,7 @@ export const projects: projectsType[] = [
   {
     id: 6,
     name: 'Repair design',
-    poster: './images/repair.png',
+    poster: './images/repair.avif',
     link: './projects/repair-design/index.html',
     github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/repair-design-project',
     technology: [
@@ -108,7 +108,7 @@ export const projects: projectsType[] = [
   {
     id: 7,
     name: 'Shelter',
-    poster: './images/shelter.png',
+    poster: './images/shelter.avif',
     link: './projects/shelter/pages/main/main.html',
     github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/shelter',
     technology: [
@@ -124,7 +124,7 @@ export const projects: projectsType[] = [
   {
     id: 8,
     name: 'Interno',
-    poster: './images/interno.png',
+    poster: './images/interno.avif',
     link: './projects/interno/index.html',
     github: 'https://github.com/SkynerSany/Portfolio/tree/Portfolio/projects/Interno',
     technology: [
