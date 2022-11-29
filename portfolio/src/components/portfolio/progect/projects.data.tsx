@@ -26,6 +26,19 @@ export const projects: projectsType[] = [
   },
   {
     id: 1,
+    name: 'SongBird',
+    poster: './images/songbird.avif',
+    link: './projects/songbird/index.html',
+    github: 'https://github.com/SkynerSany/songbird/tree/songbird',
+    technology: [
+      'javascript',
+      'sass'
+    ],
+    adaptive: true,
+    pageCount: 'Single page',
+  },
+  {
+    id: 2,
     name: 'Gem puzzle',
     poster: './images/gem-puzzle.avif',
     link: './projects/gem-puzzle/index.html',
@@ -38,7 +51,7 @@ export const projects: projectsType[] = [
     pageCount: 'Single page',
   },
   {
-    id: 2,
+    id: 3,
     name: 'To Do List',
     poster: './images/todo-list.avif',
     link: './projects/todo-list/index.html',
@@ -51,7 +64,7 @@ export const projects: projectsType[] = [
     pageCount: 'Single page',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Online zoo',
     poster: './images/online-zoo.avif',
     link: './projects/online-zoo/pages/main/index.html',
@@ -68,7 +81,7 @@ export const projects: projectsType[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: 'Weather',
     poster: './images/weather.avif',
     link: './projects/weather/index.html',
@@ -81,7 +94,7 @@ export const projects: projectsType[] = [
     pageCount: 'Single page',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Momentum',
     poster: './images/momentum.avif',
     link: './projects/momentum/index.html',
@@ -94,7 +107,7 @@ export const projects: projectsType[] = [
     pageCount: 'Single page',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Repair design',
     poster: './images/repair.avif',
     link: './projects/repair-design/index.html',
@@ -106,7 +119,7 @@ export const projects: projectsType[] = [
     pageCount: 'Single page',
   },
   {
-    id: 7,
+    id: 8,
     name: 'Shelter',
     poster: './images/shelter.avif',
     link: './projects/shelter/pages/main/main.html',
@@ -122,7 +135,7 @@ export const projects: projectsType[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     name: 'Interno',
     poster: './images/interno.avif',
     link: './projects/interno/index.html',

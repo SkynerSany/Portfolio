@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./src/assets/icons/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./dist/main.css">
+  <title>SongBird</title>
+</head>
+<body>
+  <main>
+    <article class="start-page">
+      <header class="start-page__header">
+        <ul class="logo start-page__logo">
+          <li class="logo-later">
+            <input type="checkbox" />
+            <div>S</div>
+          </li>
+          <li class="logo-later">
+            <input type="checkbox" />
+            <div>O</div>
+          </li>
+          <li class="logo-later">
+            <input type="checkbox" />
+            <div>N</div>
+          </li>
+          <li class="logo-later">
+            <input type="checkbox" />
+            <div>G</div>
+          </li>
+          <li class="logo-later">
+            <input type="checkbox" />
+            <div>B</div>
+          </li>
+          <li class="logo-later">
+            <input type="checkbox" />
+            <div>I</div>
+          </li>
+          <li class="logo-later">
+            <input type="checkbox" />
+            <div>R</div>
+          </li>
+          <li class="logo-later">
+            <input type="checkbox" />
+            <div>D</div>
+          </li>
+        </ul>
+        <div class="start-page__menu-bar">
+          <div class="start-page__bar"></div>
+          <div class="start-page__bar"></div>
+          <div class="start-page__bar"></div>
+        </div>
+        <nav class="start-page__nav">
+          <button class="start-page__link start-page__link_active" id="link-menu"></button>
+          <button class="start-page__link" id="link-quiz"></button>
+          <button class="translator-btn btn-action" data-lang=""></button>
+        </nav>
+      </header>
+      <section class="menu">
+        <div class="menu__greeting">
+          <h2 class="menu__greeting-text"></h2>
+          <span class="menu__name" contenteditable></span>
+        </div>
+        <div class="menu__btns-container">
+          <button class="menu__btn-gallery btn-action"></button>
+          <button class="menu__btn-start btn-action"></button>
+        </div>
+      </section>
+      <section class="gallery">
+        <h2 class="gallery__title"></h2>
+        <ul class="gallery__types-container">
+          <li class="gallery__progress-item gallery__progress-item_active"></li>
+          <li class="gallery__progress-item"></li>
+          <li class="gallery__progress-item"></li>
+          <li class="gallery__progress-item"></li>
+          <li class="gallery__progress-item"></li>
+        </ul>
+        <div class="gallery__list">
+        </div>
+      </section>
+      <footer class="strt-page__footer">
+        <a href="https://github.com/SkynerSany" class="strt-page__author-link" target="_blank"></a>
+        <p class="strt-page__year">2022</p>
+        <a href="https://rs.school/js/" class="strt-page__course-link" target="_blank"></a>
+      </footer>
+    </article>
+    <article class="game-page">
+      <header class="game-page__header">
+        <div class="game-page__title">
+          <ul class="logo game-page__logo">
+            <li class="logo-later">
+              <input type="checkbox" />
+              <div>S</div>
+            </li>
+            <li class="logo-later">
+              <input type="checkbox" />
+              <div>O</div>
+            </li>
+            <li class="logo-later">
+              <input type="checkbox" />
+              <div>N</div>
+            </li>
+            <li class="logo-later">
+              <input type="checkbox" />
+              <div>G</div>
+            </li>
+            <li class="logo-later">
+              <input type="checkbox" />
+              <div>B</div>
+            </li>
+            <li class="logo-later">
+              <input type="checkbox" />
+              <div>I</div>
+            </li>
+            <li class="logo-later">
+              <input type="checkbox" />
+              <div>R</div>
+            </li>
+            <li class="logo-later">
+              <input type="checkbox" />
+              <div>D</div>
+            </li>
+          </ul>
+          <p class="game-page__score"><span class="game-page__score-name"></span> <span class="game-page__score-number"></span></p>
+        </div>
+        <ul class="game-page__progress">
+          <li class="game-page__progress-item game-page__progress-item_active"></li>
+          <li class="game-page__progress-item"></li>
+          <li class="game-page__progress-item"></li>
+          <li class="game-page__progress-item"></li>
+          <li class="game-page__progress-item"></li>
+          <li class="game-page__progress-item"></li>
+        </ul>
+      </header>
+      <section class="question">
+        <img src="./src/assets/images/unknown-bird.jpg" alt="unknown-bird" class="question__img">
+        <div class="question__info">
+          <p class="question__item-name">******</p>
+          <div class="player question__player">
+            <div class="player__container"></div>
+          </div>
+        </div>
+      </section>
+      <section class="answer">
+        <ul class="answer__variants-container">
+          <li class="answer__variant">
+            <div class="answer__check answer__check_default"></div>
+            <span class="answer__variant-name"></span>
+          </li>
+          <li class="answer__variant">
+            <div class="answer__check answer__check_default"></div>
+            <span class="answer__variant-name"></span>
+          </li>
+          <li class="answer__variant">
+            <div class="answer__check answer__check_default"></div>
+            <span class="answer__variant-name"></span>
+          </li>
+          <li class="answer__variant">
+            <div class="answer__check answer__check_default"></div>
+            <span class="answer__variant-name"></span>
+          </li>
+          <li class="answer__variant">
+            <div class="answer__check answer__check_default"></div>
+            <span class="answer__variant-name"></span>
+          </li>
+          <li class="answer__variant">
+            <div class="answer__check answer__check_default"></div>
+            <span class="answer__variant-name"></span>
+          </li>
+        </ul>
+        <div class="answer__item-info">
+          <div class="answer__instuction">
+            <p class="answer__instuction-text"></p>
+            <p class="answer__instuction-text"></p>
+          </div>
+          <div class="answer__card-info">
+            <div class="answer__card">
+              <img src="" alt="animal" class="answer__img">
+              <div class="answer__info">
+                <p class="answer__name"></p>
+                <p class="answer__name-latins"></p>
+                <div class="player answer__player">
+                  <div class="player__container"></div>
+                </div>
+              </div>
+            </div>
+            <p class="answer__description"></p>
+          </div>
+        </div>
+      </section>
+      <button class="next-level next-level_disabled"></button>
+    </article>
+    <article class="result-page">
+      <div class="result-page__unconfirm">
+        <p class="result-page__title">
+          <span class="result-page__text"></span> 
+          <span class="result-page__score"></span> 
+          <span class="result-page__text"></span>
+        </p>
+        <p class="result-page__question">
+          <span class="result-page__text"></span> 
+          <span class="result-page__unscore"> </span>
+          <span class="result-page__text"></span>
+        </p>
+        <p class="result-page__question">
+          <span class="result-page__text"></span>
+        </p>
+        <div class="result-page__btns-container">
+          <button class="result-page__btn-new btn-action"></button>
+          <button class="result-page__btn-menu btn-action"></button>
+        </div>
+      </div>
+      <div class="result-page__confirm">
+        <p class="result-page__title">
+          <span class="result-page__text">Поздравляю, вы набрали максимальное колличество баллов.</span>
+        </p>
+        <div class="result-page__btns-container">
+          <button class="result-page__btn-new btn-action">Новая игра</button>
+          <button class="result-page__btn-menu btn-action">Меню</button>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script src="./dist/bundle.js"></script>
+</body>
+</html>
