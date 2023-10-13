@@ -18,12 +18,12 @@ function TechnologyList({ technologies }: { technologies: string[] }) {
     <div className="slider__technology-list">
       <p className="slider__title">Technologies: </p>
       {
-        technologies.map(technology => (
-          <img className='slider__technology'
-              src={`./icons/technology/${ technology }.svg`}
-              alt={ technology }
-              key={ uniqid() }
-          />
+        technologies.map((technology, id) => (
+          <span className='slider__technology' key={ uniqid() }>
+            {
+              technologies.length - 1 === id ? technology : `${technology},`
+            }
+          </span>
         ))
       }
     </div>

@@ -93,8 +93,7 @@
   font-size: 18px;
 
   & > * {
-    height: 80px;
-    margin: 20px 0;
+    margin: 30px 0;
   }
 
   @media screen and (max-width: 640px) {
@@ -106,27 +105,18 @@
     align-items: center;
 
     font-size: 2.81vw;
-  
-    & > * {
-      height: 12.50vw;
-      margin: 2.5vw 0;
-    }
   }
 }
 
 .slider__technology-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 10px;
 }
 
 .slider__technology {
-  height: 60px;
-  margin: 10px;
 
-  @media screen and (max-width: 640px) {
-    height: 9.38vw;
-    margin: 1.56vw;
-  }
 }
 
 .slider__pages {

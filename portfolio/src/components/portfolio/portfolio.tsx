@@ -1,7 +1,7 @@
 import './portfolio.scss';
 import { projects } from './progect/projects.data';
 import uniqid from 'uniqid';
-import Project from './progect/project';
+import Project from './progect/Project';
 import { useRef, useState } from 'react';
 
 export default function Portfolio() {
@@ -59,7 +59,7 @@ export default function Portfolio() {
           <div className="slider">
             <div ref={ viewport } className="slider__viewport">
               {
-                projects.map(project => <Project projectId={ project.id } key={ uniqid() } />)
+                projects.map((_, id) => <Project projectId={ id } key={ uniqid() } />)
               } 
             </div>
           </div>
