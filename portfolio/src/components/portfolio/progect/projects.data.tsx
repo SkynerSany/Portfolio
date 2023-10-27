@@ -13,11 +13,12 @@ export const projects: projectsType[] = [
   {
     name: 'Movies collection',
     poster: './images/movies-collection.avif',
-    link: './projects/movies-collection/build/index.html',
+    link: 'https://653b9f5c2a07ac1e62509c01--singular-liger-715bc8.netlify.app/',
     github: 'https://github.com/SkynerSany/MoviesCollection/tree/MoviesCollection',
     technology: [
       'React',
-      'SASS'
+      'SASS',
+      'Koa'
     ],
     adaptive: true,
     pageCount: 'Single page',
@@ -68,6 +69,23 @@ export const projects: projectsType[] = [
     ],
     adaptive: true,
     pageCount: 'Single page',
+  },
+  {
+    name: 'Async race',
+    poster: './images/async-race.avif',
+    link: 'https://653b71e26281682a7ceb0e8a--stalwart-crumble-df0308.netlify.app/',
+    github: 'https://github.com/SkynerSany/async-race',
+    technology: [
+      'TypeScript',
+      'SASS',
+      'Koa'
+    ],
+    adaptive: true,
+    pageCount: '2',
+    pages: [
+      'Garage',
+      'Score',
+    ],
   },
   {
     name: 'Gem puzzle',
