@@ -1,4 +1,4 @@
-@import '../assets/styles/variables.scss';
+@import '../../assets/styles/variables.scss';
 
 * {
   box-sizing: border-box;
@@ -52,23 +52,23 @@ button {
 
 @font-face {
   font-family: arodoba;
-  src: url(../assets/fonts/ArodoraPro-Light.otf);
+  src: url(../../assets/fonts/ArodoraPro-Light.otf);
 }
 
 @font-face {
   font-family: NextArt;
   font-weight: 700;
-  src: url(../assets/fonts/NextArt_Bold.otf);
+  src: url(../../assets/fonts/NextArt_Bold.otf);
 }
 
 @font-face {
   font-family: NextArt;
   font-weight: 400;
-  src: url(../assets/fonts/NextArt_Regular.otf);
+  src: url(../../assets/fonts/NextArt_Regular.otf);
 }
 
 @font-face {
   font-family: NextArt;
   font-weight: 600;
-  src: url(../assets/fonts/NextArt_SemiBold.otf);
+  src: url(../../assets/fonts/NextArt_SemiBold.otf);
 }
