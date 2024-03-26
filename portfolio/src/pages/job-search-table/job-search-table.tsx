@@ -1,23 +1,10 @@
 import { useState } from "react";
-import { Collapse, Table } from "react-bootstrap";
+import { Button, Collapse, Table } from "react-bootstrap";
+import ModalWindow from "../../components/modal/modal";
+import { ICompany, IResponse } from "./job-search-table.interfaces";
 import './job-search-table.scss';
 
-interface IResponse {
-  "title": string,
-  "requirements": string[],
-  "responseTime": string,
-  "date": string,
-  "result": string,
-  "feedback": string[]
-};
-
-interface IVac {
-  "name": string,
-  "date": string,
-  "responses": IResponse[]
-}
-
-const VAC: IVac[] = [
+const VAC: ICompany[] = [
   {
     "name": "Modsen",
     "date": "10.02.2024",
@@ -129,6 +116,11 @@ const VAC: IVac[] = [
 ];
 
 function ResponseInfo({response, number}: {response: IResponse, number: number}) {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <tr>
       <td>{ number }</td>
@@ -150,12 +142,24 @@ function ResponseInfo({response, number}: {response: IResponse, number: number})
           response.feedback.map((text) => <tr>{ text }</tr>)
         }
       </td>
+      <td><Button variant="outline-secondary" onClick={() => handleShow()}>edit</Button></td>
+      <ModalWindow type="responces" show={show} handleClose={handleClose} data={VAC[0]} />
     </tr>
   )
 }
 
-function TableLine({companyData, number}: {companyData: IVac, number: number}) {
+function TableLine({companyData, number}: {companyData: ICompany, number: number}) {
   const [open, setOpen] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleClose = (e?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e?.stopPropagation();
+    setShow(false)
+  };
+  const handleShow = (e?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e?.stopPropagation();
+    setShow(true)
+  };
 
   return (
     <>
@@ -164,10 +168,12 @@ function TableLine({companyData, number}: {companyData: IVac, number: number}) {
         <td>{ companyData.name }</td>
         <td>{ companyData.responses.length }</td>
         <td>{ companyData.date }</td>
+        <td><Button variant="outline-secondary" onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleShow(e)}>edit</Button></td>
+        <ModalWindow type="responces" show={show} handleClose={handleClose} data={companyData} />
       </tr>
       <tr>
         <Collapse in={open}>
-          <td colSpan={4}>
+          <td colSpan={5}>
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -178,6 +184,7 @@ function TableLine({companyData, number}: {companyData: IVac, number: number}) {
                   <th>Время ответа</th>
                   <th>Результат</th>
                   <th>Фидбэк</th>
+                  <th>Изменить</th>
                 </tr>
               </thead>
               <tbody>
@@ -194,21 +201,24 @@ function TableLine({companyData, number}: {companyData: IVac, number: number}) {
 }
 
 export default function JobSearchTable() {
-    return (
-    <Table striped bordered hover variant='dark'>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Название организации</th>
-          <th>Количество откликов</th>
-          <th>Дата последнего отклика</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          VAC.map((data, i) => <TableLine companyData={ data } number={ i + 1 } />)
-        }
-      </tbody>
-    </Table>
+  return (
+    <>
+      <Table striped bordered hover variant='dark'>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Название организации</th>
+            <th>Количество откликов</th>
+            <th>Дата последнего отклика</th>
+            <th>Изменить</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            VAC.map((data, i) => <TableLine companyData={ data } number={ i + 1 } />)
+          }
+        </tbody>
+      </Table>
+    </>
   )
 }
